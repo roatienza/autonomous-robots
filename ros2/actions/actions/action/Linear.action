@@ -1,0 +1,8 @@
+# Goal
+float32 linear
+---
+# Result
+bool success
+---
+# Feedback
+float32 current_linear

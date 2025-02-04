@@ -1,0 +1,8 @@
+# Goal
+float32 angle
+---
+# Result
+bool success
+---
+# Feedback
+float32 current_angle
