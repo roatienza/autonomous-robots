@@ -18,6 +18,6 @@ Test using python:
 ```
 # under franka folde
 cd python
-python3 rest.py <x> <y> <z> <thetax> <thetay> <thetaz>
-# try with small values in meter for x, y and z. Still have bugs on thetax,y,z
+python3 rest.py <x> <y> <z> <time> <thetaz> <thetay> <thetax>
+# try with small values in meter for x, y and z. Time in sec. Use slow time linke 5. Still have bugs on thetax,y,z
 ```
