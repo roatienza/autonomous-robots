@@ -7,6 +7,7 @@
 
 #include <cpprest/http_listener.h>
 #include <cpprest/json.h>
+#include <iomanip>  // For std::setprecision
 #include "common.h"
 
 using namespace web;
@@ -21,28 +22,13 @@ public:
     // FIXME: Add a try-catch block to catch exceptions thrown by the robot
     RobotHandler(const std::string& ip_addr) : robot(ip_addr), gripper(ip_addr) { // Initialize robot in the initializer list
     }
-    void initialize() {
-
-        //setDefaultBehavior(robot);
-       
+    void initialize() {     
        	goHome(robot);
-
-        // Set additional parameters always before the control loop, NEVER in the control loop!
-        // Set collision behavior.
-        //robot.setCollisionBehavior(
-        //    {{20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0}}, {{20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0}},
-        //    {{20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0}}, {{20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0}},
-        //    {{20.0, 20.0, 20.0, 25.0, 25.0, 25.0}}, {{20.0, 20.0, 20.0, 25.0, 25.0, 25.0}},
-        //    {{20.0, 20.0, 20.0, 25.0, 25.0, 25.0}}, {{20.0, 20.0, 20.0, 25.0, 25.0, 25.0}});
-
-        // Perform any additional setup or checks
-        
-        
         gripper.homing();
         
         franka::Model model = robot.loadModel();
         const franka::RobotState& robot_state = robot.readOnce();
-        std::array<double, 16> initial_pose = robot_state.O_T_EE_c;
+        std::array<double, 16> initial_pose = robot_state.O_T_EE; //robot_state.O_T_EE_c;
         for(int i = 0; i < 16; i++)
         {
             std::cout << initial_pose[i] << ", ";
@@ -51,22 +37,46 @@ public:
                 std::cout << std::endl;
             }
         }
-        
         getRotationAngles();
     }
 
-    std::tuple<double, double, double> getRotationAngles() {
-        const franka::RobotState& robot_state = robot.readOnce();
-        std::array<double, 16> pose = robot_state.O_T_EE_c;
+    
+    std::tuple<double, double, double> getRotationAngles(const std::array<double, 16>* custom_pose = nullptr, bool verbose = true) {
+        std::array<double, 16> pose;
+        if (custom_pose) {
+            pose = *custom_pose;
+        } else {
+            const franka::RobotState& robot_state = robot.readOnce();
+            pose = robot_state.O_T_EE;
+        }
+        
         double Beta = atan2(-pose[2], sqrt(pow(pose[0], 2) + pow(pose[1], 2)));
-        assert (cos(Beta) != 0);
-        //double Alpha = atan2(pose[1] / cos(Beta), pose[0] / cos(Beta));
-        //double Gamma = atan2(pose[6] / cos(Beta), pose[10] / cos(Beta));
-        double Alpha = atan2(pose[1], pose[0]);
-        double Gamma = atan2(pose[6], pose[10]);
+        double Alpha = 0.0;
+        double Gamma = 0.0;
+        double cosBeta = cos(Beta);
+        if (abs(cosBeta) < 1e-5) {
+            if (Beta > 0){
+                Beta = M_PI_2;
+                Gamma = atan2(pose[4], pose[5]);
+            }else{
+                Beta = -M_PI_2;
+                Gamma = -atan2(pose[4], pose[5]);
+            }
+        }else{
+            Alpha = atan2(pose[1]/cosBeta, pose[0]/cosBeta);
+            Gamma = atan2(pose[6]/cosBeta, pose[10]/cosBeta);
+        }
+        
+        if (verbose) {
+            std::cout << std::fixed << std::setprecision(2);
+            std::cout << "Alpha(Z): " << Alpha << ", Beta(Y): " << Beta << ", Gamma(X): " << Gamma << " radians" << std::endl;
+            // in degrees
+            std::cout << "Alpha(Z): " << Alpha * 180 / M_PI << ", Beta(Y): " << Beta * 180 / M_PI << ", Gamma(X): " << Gamma * 180 / M_PI << " degrees" << std::endl;
+            //std::cout << "cosBeta: " << cos(Beta) << std::endl;
+            // xyz coordinates
+            std::cout << "X: " << pose[12] << ", Y: " << pose[13] << ", Z: " << pose[14] << " meters" <<  std::endl;
 
-        std::cout << "Alpha: " << Alpha << ", Beta: " << Beta << ", Gamma: " << Gamma << std::endl;
-        std::cout << "cosine beta: " << cos(Beta) << std::endl;
+        }
         return std::make_tuple(Alpha, Beta, Gamma);
     }
 
@@ -108,42 +118,46 @@ public:
         std::array<double, 16> final_pose;
         double time = 0.0;
         double tf = numbers[3];
-        double Alpha = 0.0;
-        double Beta = 0.0;
-        double Gamma = 0.0;
-        double Alphaf = 0.0;
-        double Betaf = 0.0;
-        double Gammaf = 0.0;
+        double Alpha = 0.0, Beta = 0.0, Gamma = 0.0l;
+        double deltaAlpha = 0.0, deltaBeta = 0.0, deltaGamma = 0.0;
+        double Alphaf = 0.0, Betaf = 0.0, Gammaf = 0.0;
         bool is_rotation = false;
         if (numbers.size() == 7)
         {
+            // this will be treated as delta rotation angles in degrees
             // rotation around z-axis
-            Alphaf = numbers[4];
+            deltaAlpha = numbers[4];
             // rotation around y-axis
-            Betaf = numbers[5];
+            deltaBeta = numbers[5];
             // rotation around x-axis
-            Gammaf = numbers[6];
+            deltaGamma = numbers[6];
+
+            // convert to radians
+            deltaAlpha = deltaAlpha * M_PI / 180;
+            deltaBeta = deltaBeta * M_PI / 180;
+            deltaGamma = deltaGamma * M_PI / 180;
+
             is_rotation = true;
         }
-        if (tf < 1.0)
+        if (tf < 5.0)
         {
-            throw std::runtime_error("The time duration must be at least 1 second.");
+            throw std::runtime_error("The time duration must be at least 5 seconds.");
             return final_coords;
         }
 
         try
         {
-            auto trajectory_callback = [=, &time, &Alpha, &Beta, &Gamma, &initial_pose, &final_pose](
+            auto trajectory_callback = [this, xf, yf, zf, tf, is_rotation, deltaAlpha, deltaBeta, deltaGamma, 
+                                        &time, &Alpha, &Beta, &Gamma, &Alphaf, &Betaf, &Gammaf, &initial_pose, &final_pose](
                                            const franka::RobotState &robot_state,
                                            franka::Duration period) -> franka::CartesianPose
             {
-                // Update time.
                 time += period.toSec();
-
+                
                 if (time == 0.0)
                 {
                     // Read the initial pose to start the motion from in the first time step.
-                    initial_pose = robot_state.O_T_EE_c;
+                    initial_pose = robot_state.O_T_EE;
                     for(int i = 0; i < 16; i++)
                     {
                         std::cout << initial_pose[i] << ", ";
@@ -153,17 +167,20 @@ public:
                         }
                     }
                     if (is_rotation){
-                        // Beta is atan2(-r31, sqrt(r11^2 + r21^2))
-                        Beta = atan2(-initial_pose[2], sqrt(pow(initial_pose[0], 2) + pow(initial_pose[1], 2)));
-                        // Alpha is atan2(r21/cos(Beta), r11/cos(Beta))
-                        assert (cos(Beta) != 0);
-                        Alpha = atan2(initial_pose[1] / cos(Beta), initial_pose[0] / cos(Beta));
-                        // Gamma is atan2(r32/cos(Beta), r33/cos(Beta))
-                        Gamma = atan2(initial_pose[6] / cos(Beta), initial_pose[10] / cos(Beta));
-                        std::cout << "Alpha: " << Alpha << ", Beta: " << Beta << ", Gamma: " << Gamma << std::endl;
+                        // get the rotation angles
+                        std::tuple<double, double, double> angles = getRotationAngles(&initial_pose, false);
+                        Alpha = std::get<0>(angles);
+                        Beta = std::get<1>(angles);
+                        Gamma = std::get<2>(angles);
+                        
+                        // Calculate final rotation angles
+                        Alphaf = Alpha + deltaAlpha;
+                        Betaf = Beta + deltaBeta;
+                        Gammaf = Gamma + deltaGamma;
                     }
                 }
 
+                // cubic polynomial trajectory
                 franka::CartesianPose pose_desired = initial_pose;
                 double t2 = pow(time, 2);
                 double t3 = pow(time, 3);
@@ -241,7 +258,7 @@ public:
         }
 
         // Initialize final_pose with the robot's final pose
-        final_pose = robot.readOnce().O_T_EE_c;
+        final_pose = robot.readOnce().O_T_EE;
         // call getRotationAngles with final_pose
         std::tuple<double, double, double> final_angles = getRotationAngles();
         final_coords[0] = final_pose[12];

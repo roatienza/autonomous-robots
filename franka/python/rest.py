@@ -1,14 +1,19 @@
 '''
 Sample python REST API
 
-Move to cartesian coordinates (0.5, 0, 0.3) in 3 seconds:
-    python3 rest.py --parameters 0.5 0 0.3 3.0
+Move to cartesian coordinates (0.5, 0, 0.3) in 5 seconds:
+    python3 rest.py --parameters 0.5 0 0.3 5.0
+    
+Move to cartesian coordinates (0.6, 0, 0.2) in 5 seconds with gripper delta rotation angles 0 10 0 degrees:
+    python3 rest.py --parameters 0.6 0 0.2 5.0 0 10 0
     
 Close the gripper:
     python3 rest.py --command closeGripper --parameters 0.0
 
 Open the gripper:
     python3 rest.py --command openGripper --parameters 0.1
+    
+
 
 '''
 

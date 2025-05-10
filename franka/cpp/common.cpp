@@ -13,7 +13,7 @@
 void goHome(franka::Robot& robot)
 {
   std::array<double, 7> q_goal = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};
-  MotionGenerator motion_generator(1., q_goal);
+  MotionGenerator motion_generator(.1, q_goal);
 
   std::cout << "WARNING: This example will move the robot! "
             << "Please make sure to have the user stop button at hand!" << std::endl
