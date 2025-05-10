@@ -117,32 +117,68 @@ public:
         std::array<double, 16> initial_pose;
         std::array<double, 16> final_pose;
         double time = 0.0;
-        double tf = numbers[3];
+        double tf = 0.0;
         double Alpha = 0.0, Beta = 0.0, Gamma = 0.0l;
         double deltaAlpha = 0.0, deltaBeta = 0.0, deltaGamma = 0.0;
         double Alphaf = 0.0, Betaf = 0.0, Gammaf = 0.0;
         bool is_rotation = false;
-        if (numbers.size() == 7)
+        // Define a default constant for time
+        const double DEFAULT_MOTION_TIME = 5.0;
+
+        if (numbers.size() < 4)
         {
-            // this will be treated as delta rotation angles in degrees
-            // rotation around z-axis
+            tf = DEFAULT_MOTION_TIME; // Use the default time duration
+        }
+        else if (numbers.size() >= 4)
+        {
+            tf = numbers[3];
+            // Check if tf is less than the default time
+            if (tf < DEFAULT_MOTION_TIME)
+            {
+            tf = DEFAULT_MOTION_TIME;
+            }
+        }
+
+        if (numbers.size() >= 5)
+        {
             deltaAlpha = numbers[4];
-            // rotation around y-axis
-            deltaBeta = numbers[5];
-            // rotation around x-axis
-            deltaGamma = numbers[6];
-
-            // convert to radians
+            // must be between -180 and 180
+            if (deltaAlpha < -180 || deltaAlpha > 180)
+            {
+                deltaAlpha = 0.0;
+                // print error
+                std::cerr << "Error: deltaAlpha must be between -180 and 180 degrees." << std::endl;
+            }
+            //in radians
             deltaAlpha = deltaAlpha * M_PI / 180;
-            deltaBeta = deltaBeta * M_PI / 180;
-            deltaGamma = deltaGamma * M_PI / 180;
-
             is_rotation = true;
         }
-        if (tf < 5.0)
+
+        if (numbers.size() >= 6)
         {
-            throw std::runtime_error("The time duration must be at least 5 seconds.");
-            return final_coords;
+            deltaBeta = numbers[5];
+            // must be between -180 and 180
+            if (deltaBeta < -180 || deltaBeta > 180)
+            {
+                deltaBeta = 0.0;
+                // print error
+                std::cerr << "Error: deltaBeta must be between -180 and 180 degrees." << std::endl;
+            }
+            //in radians
+            deltaBeta = deltaBeta * M_PI / 180;
+        }
+        if (numbers.size() >= 7)
+        {
+            deltaGamma = numbers[6];
+            // must be between -180 and 180
+            if (deltaGamma < -180 || deltaGamma > 180)
+            {
+                deltaGamma = 0.0;
+                // print error
+                std::cerr << "Error: deltaGamma must be between -180 and 180 degrees." << std::endl;
+            }
+            //in radians
+            deltaGamma = deltaGamma * M_PI / 180;
         }
 
         try
