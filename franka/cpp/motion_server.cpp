@@ -142,12 +142,12 @@ public:
         if (numbers.size() >= 5)
         {
             deltaAlpha = numbers[4];
-            // must be between -180 and 180
-            if (deltaAlpha < -180 || deltaAlpha > 180)
+            // must be between -90 to 90
+            if (deltaAlpha < -90 || deltaAlpha > 90)
             {
                 deltaAlpha = 0.0;
                 // print error
-                std::cerr << "Error: deltaAlpha must be between -180 and 180 degrees." << std::endl;
+                std::cerr << "Error: deltaAlpha must be between -90 and 90 degrees." << std::endl;
             }
             //in radians
             deltaAlpha = deltaAlpha * M_PI / 180;
@@ -157,12 +157,12 @@ public:
         if (numbers.size() >= 6)
         {
             deltaBeta = numbers[5];
-            // must be between -180 and 180
-            if (deltaBeta < -180 || deltaBeta > 180)
+            // must be between -90 and 90
+            if (deltaBeta < -90 || deltaBeta > 90)
             {
                 deltaBeta = 0.0;
                 // print error
-                std::cerr << "Error: deltaBeta must be between -180 and 180 degrees." << std::endl;
+                std::cerr << "Error: deltaBeta must be between -90 and 90 degrees." << std::endl;
             }
             //in radians
             deltaBeta = deltaBeta * M_PI / 180;
@@ -170,12 +170,12 @@ public:
         if (numbers.size() >= 7)
         {
             deltaGamma = numbers[6];
-            // must be between -180 and 180
-            if (deltaGamma < -180 || deltaGamma > 180)
+            // must be between -90 and 90
+            if (deltaGamma < -90 || deltaGamma > 90)
             {
                 deltaGamma = 0.0;
                 // print error
-                std::cerr << "Error: deltaGamma must be between -180 and 180 degrees." << std::endl;
+                std::cerr << "Error: deltaGamma must be between -90 and 90 degrees." << std::endl;
             }
             //in radians
             deltaGamma = deltaGamma * M_PI / 180;
@@ -300,9 +300,9 @@ public:
         final_coords[0] = final_pose[12];
         final_coords[1] = final_pose[13];
         final_coords[2] = final_pose[14];
-        final_coords[3] = std::get<0>(final_angles);
-        final_coords[4] = std::get<1>(final_angles);
-        final_coords[5] = std::get<2>(final_angles);
+        final_coords[3] = std::get<0>(final_angles) * 180.0 / M_PI;  // Alpha (Z) in degrees
+        final_coords[4] = std::get<1>(final_angles) * 180.0 / M_PI;  // Beta (Y) in degrees
+        final_coords[5] = std::get<2>(final_angles) * 180.0 / M_PI;  // Gamma (X) in degrees
         return final_coords;
     }
 
