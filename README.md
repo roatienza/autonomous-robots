@@ -10,3 +10,12 @@ Lecture Notes and Experiments on Autonomous Robots
 | Perception | [PDF](https://drive.google.com/file/d/1tZcBpqq-5jJ2vID9ryoN6sflCSZ9sJsk/view?usp=sharing) | - |
 | Visual Geometry | [PDF](https://drive.google.com/file/d/1mW31Csyx3tbVoknNvRaBG17z1x5YXhbv/view?usp=sharing) | - | 
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
+
+
+### Datasets
+
+- [EgoDex](https://arxiv.org/pdf/2505.11709)
+- 
+
+### Blogs
+- [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
