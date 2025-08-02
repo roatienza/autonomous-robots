@@ -20,5 +20,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
 
-### Papers
+### Datasets
 - [GraspGen](https://graspgen.github.io/)
+- [ShareGPT-4o-Image](https://github.com/FreedomIntelligence/ShareGPT-4o-Image)
+- [Wan Video Generation](https://github.com/Wan-Video/Wan2.2?tab=readme-ov-file)
