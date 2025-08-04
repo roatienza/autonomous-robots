@@ -25,3 +25,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [ShareGPT-4o-Image](https://github.com/FreedomIntelligence/ShareGPT-4o-Image)
 - [Wan Video Generation](https://github.com/Wan-Video/Wan2.2?tab=readme-ov-file)
 - [RoboGen](https://arxiv.org/pdf/2311.01455)
+
+### Papers
+
+- [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
