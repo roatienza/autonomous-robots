@@ -15,7 +15,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Datasets
 
 - [EgoDex](https://arxiv.org/pdf/2505.11709)
-- 
+- [Princeton Digital Assets](https://princeton-vl.github.io/infinigen-sim/)
 
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
