@@ -33,3 +33,4 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Papers
 
 - [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
+- [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
