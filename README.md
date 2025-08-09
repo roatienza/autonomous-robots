@@ -26,12 +26,13 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Wan Video Generation](https://github.com/Wan-Video/Wan2.2?tab=readme-ov-file)
 - [RoboGen](https://arxiv.org/pdf/2311.01455)
 
-### Reinforcement Learning Framework
-
-- [EasyR1](https://github.com/hiyouga/EasyR1)
-
 ### Papers
 
 - [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
+
+### Reinforcement Learning Framework
+
+- [EasyR1](https://github.com/hiyouga/EasyR1)
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
+
