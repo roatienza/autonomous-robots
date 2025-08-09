@@ -34,3 +34,4 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
+- [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
