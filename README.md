@@ -12,15 +12,13 @@ Lecture Notes and Experiments on Autonomous Robots
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
 
 
+### Blogs
+- [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
+  
 ### Datasets
 
 - [EgoDex](https://arxiv.org/pdf/2505.11709)
 - [Princeton Digital Assets](https://princeton-vl.github.io/infinigen-sim/)
-
-### Blogs
-- [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
-
-### Datasets and Data Generation
 - [GraspGen](https://graspgen.github.io/)
 - [ShareGPT-4o-Image](https://github.com/FreedomIntelligence/ShareGPT-4o-Image)
 - [Wan Video Generation](https://github.com/Wan-Video/Wan2.2?tab=readme-ov-file)
