@@ -39,6 +39,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 
+### Tracking
+
+- [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
+
 ### World Models
 
 - [DreamgGem by NVIDIA](https://research.nvidia.com/labs/gear/dreamgen/)
