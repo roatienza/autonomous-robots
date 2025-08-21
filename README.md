@@ -24,6 +24,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Wan Video Generation](https://github.com/Wan-Video/Wan2.2?tab=readme-ov-file)
 - [RoboGen](https://arxiv.org/pdf/2311.01455)
 
+### Vision
+
+- [Dinov3](https://ai.meta.com/blog/dinov3-self-supervised-vision-model)
+
 ### Foundation Models
 
 - [Perpeption Foundation Model](https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/)
