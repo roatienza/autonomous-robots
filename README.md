@@ -49,5 +49,6 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### World Models
 
+- [NVIDIA Cosmos Reasoning](https://research.nvidia.com/labs/dir/cosmos-reason1/)
 - [DreamgGem by NVIDIA](https://research.nvidia.com/labs/gear/dreamgen/)
 
