@@ -46,6 +46,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 
+
+### SLAM
+
+- [Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
+
 ### Tracking
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
