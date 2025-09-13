@@ -60,6 +60,10 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
 
+### Vision Language Action (VLA)
+
+- [OpenPi](https://github.com/Physical-Intelligence/openpi)
+
 ### World Models
 
 - [NVIDIA Cosmos Reasoning](https://research.nvidia.com/labs/dir/cosmos-reason1/)
