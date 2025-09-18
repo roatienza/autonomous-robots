@@ -34,6 +34,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Vision
 
 - [Dinov3](https://ai.meta.com/blog/dinov3-self-supervised-vision-model)
+- [Map Anything](https://map-anything.github.io/)
 
 ### Foundation Models
 
