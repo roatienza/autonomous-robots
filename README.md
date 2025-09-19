@@ -25,6 +25,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [RoboGen](https://arxiv.org/pdf/2311.01455)
 - [Large Scale Grasp Dataset](https://research.nvidia.com/publication/2021-05_acronym-large-scale-grasp-dataset-based-simulation)
 - [Rosario Agricultural Dataset](https://cifasis.github.io/rosariov2/)
+- [Project Go-Big](https://www.figure.ai/news/project-go-big)
 
 
 ### Robotics Frameowork
