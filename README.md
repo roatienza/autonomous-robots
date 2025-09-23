@@ -12,6 +12,11 @@ Lecture Notes and Experiments on Autonomous Robots
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
 
 
+### Robot Agents
+
+- [RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
+- [OpenMind](https://openmind.org/)
+
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
   
