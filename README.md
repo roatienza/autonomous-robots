@@ -31,6 +31,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Large Scale Grasp Dataset](https://research.nvidia.com/publication/2021-05_acronym-large-scale-grasp-dataset-based-simulation)
 - [Rosario Agricultural Dataset](https://cifasis.github.io/rosariov2/)
 - [Project Go-Big](https://www.figure.ai/news/project-go-big)
+- [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 
 
 ### Robotics Frameowork
