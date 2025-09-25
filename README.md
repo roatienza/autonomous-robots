@@ -33,6 +33,9 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Project Go-Big](https://www.figure.ai/news/project-go-big)
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 
+### Inference Pipeline
+
+-[DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
 
 ### Robotics Frameowork
 
