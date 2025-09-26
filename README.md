@@ -32,10 +32,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Rosario Agricultural Dataset](https://cifasis.github.io/rosariov2/)
 - [Project Go-Big](https://www.figure.ai/news/project-go-big)
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
+- [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 
 ### Inference Pipeline
 
--[DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
+- [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
 
 ### Robotics Frameowork
 
