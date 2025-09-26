@@ -70,6 +70,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Tracking
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
+- [Person Tracking (Sports)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/basketball-ai-how-to-detect-track-and-identify-basketball-players.ipynb)
 
 ### Vision Language Action (VLA)
 
