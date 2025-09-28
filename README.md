@@ -12,10 +12,11 @@ Lecture Notes and Experiments on Autonomous Robots
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
 
 
-### Robot Agents
+### Agents in Robotics
 
 - [RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
 - [OpenMind](https://openmind.org/)
+- [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
 
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
@@ -34,28 +35,25 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 
-### Inference Pipeline
-
-- [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
-
-### Robotics Frameowork
-
-- [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
-
-### Vision
-
-- [Dinov3](https://ai.meta.com/blog/dinov3-self-supervised-vision-model)
-- [Map Anything](https://map-anything.github.io/)
-
 ### Foundation Models
 
 - [Perpeption Foundation Model](https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/)
 - [Vision Language Model Book](https://books.google.com.ph/books?hl=en&lr=&id=EnqCEQAAQBAJ&oi=fnd&pg=PA228&ots=gd6NsKrxmc&sig=xrZ7-mB00G-w_QyRlAXGEhfLNAU&redir_esc=y#v=onepage&q&f=false)
+  
+### Grasping
+
+- [FoundationGrasp and GraspGPT](https://github.com/mkt1412/GraspGPT_public)
+
+### Inference Pipeline
+
+- [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
+
 
 ### Papers
 
 - [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
 - [Imitating Humans](https://kimhanjung.github.io/UniSkill/)
+
 
 ### Reinforcement Learning Framework
 
@@ -72,6 +70,13 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
 - [Person Tracking (Sports)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/basketball-ai-how-to-detect-track-and-identify-basketball-players.ipynb)
+  
+
+
+### Vision
+
+- [Dinov3](https://ai.meta.com/blog/dinov3-self-supervised-vision-model)
+- [Map Anything](https://map-anything.github.io/)
 
 ### Vision Language Action (VLA)
 
