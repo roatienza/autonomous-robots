@@ -34,6 +34,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Project Go-Big](https://www.figure.ai/news/project-go-big)
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
+- [Robocasa](https://robocasa.ai/) :star2:
 
 ### Foundation Models
 
