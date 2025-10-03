@@ -22,6 +22,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Memory for Robotics
 
 - [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
+- [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
 
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
