@@ -18,6 +18,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [OpenMind](https://openmind.org/)
 - [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
 
+
+### Memory for Robotics
+
+- [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
+
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
   
