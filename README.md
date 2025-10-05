@@ -23,9 +23,6 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
 
-### Robot Development Kits
-
-- [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
   
 ### Datasets
 
@@ -41,6 +38,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 - [Robocasa](https://robocasa.ai/) :star2:
+
+### Development Kits for Robotics
+
+- [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
+
 
 ### Foundation Models
 
