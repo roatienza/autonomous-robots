@@ -19,14 +19,13 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
 
 
-### Memory for Robotics
-
-- [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
-- [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
-- [FindingDory](https://arxiv.org/pdf/2506.15635)
 
 ### Blogs
 - [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
+
+### Robot Development Kits
+
+- [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
   
 ### Datasets
 
@@ -55,6 +54,13 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Inference Pipeline
 
 - [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
+
+
+### Memory for Robotics
+
+- [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
+- [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
+- [FindingDory](https://arxiv.org/pdf/2506.15635)
 
 
 ### Papers
