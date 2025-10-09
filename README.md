@@ -39,6 +39,12 @@ Lecture Notes and Experiments on Autonomous Robots
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 - [Robocasa](https://robocasa.ai/) :star2:
 
+
+### Diffusion in Robotics
+
+- [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/pdf/2303.04137)
+- [Diffusion vs Autoregressive in Robotics](https://blog.ml.cmu.edu/2025/09/22/diffusion-beats-autoregressive-in-data-constrained-settings/)
+
 ### Development Kits for Robotics
 
 - [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
