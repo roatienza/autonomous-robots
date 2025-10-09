@@ -58,6 +58,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Grasping
 
 - [FoundationGrasp and GraspGPT](https://github.com/mkt1412/GraspGPT_public)
+- [Visual Dexterity: In-Hand Reorientation of Novel and Complex Object Shapes](https://taochenshh.github.io/projects/visual-dexterity)
 
 ### Inference Pipeline
 
