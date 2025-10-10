@@ -72,6 +72,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
 - [FindingDory](https://arxiv.org/pdf/2506.15635)
 
+### Motion Retargeting
+
+- [General Motion Retargeting](https://github.com/YanjieZe/GMR)
+
 ### Neural Robots
 
 - [Neural Robot Dynamics](https://arxiv.org/pdf/2508.15755)
