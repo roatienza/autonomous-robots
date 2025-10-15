@@ -121,6 +121,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Vision Language Action (VLA)
 
 - [OpenPi](https://github.com/Physical-Intelligence/openpi)
+- [State of VLA 2026](https://mbreuss.github.io/blog_post_iclr_26_vla.html)
 
 ### World Models
 
