@@ -61,6 +61,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Visual Dexterity: In-Hand Reorientation of Novel and Complex Object Shapes](https://taochenshh.github.io/projects/visual-dexterity)
 - [AffordGrasp](https://arxiv.org/pdf/2503.00778)
 
+
+### Humanoid 
+
+- [OpenArm - Open Source Humanoid](https://github.com/enactic/OpenArm)
+
 ### Inference Pipeline
 
 - [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
