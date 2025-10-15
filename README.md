@@ -54,6 +54,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Perpeption Foundation Model](https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/)
 - [Vision Language Model Book](https://books.google.com.ph/books?hl=en&lr=&id=EnqCEQAAQBAJ&oi=fnd&pg=PA228&ots=gd6NsKrxmc&sig=xrZ7-mB00G-w_QyRlAXGEhfLNAU&redir_esc=y#v=onepage&q&f=false)
+- [Streaming VLM - Han Lab MIT](https://github.com/mit-han-lab/streaming-vlm)
   
 ### Grasping
 
