@@ -38,6 +38,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 - [Robocasa](https://robocasa.ai/) :star2:
+- [Egocentric Dataset](https://build.ai/opensource)
 
 
 ### Diffusion in Robotics
