@@ -134,4 +134,4 @@ Lecture Notes and Experiments on Autonomous Robots
 - [DreamgGem by NVIDIA](https://research.nvidia.com/labs/gear/dreamgen/)
 - [Genesis RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2)
-
+- [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)
