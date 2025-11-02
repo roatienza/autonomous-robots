@@ -65,6 +65,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [FoundationGrasp and GraspGPT](https://github.com/mkt1412/GraspGPT_public)
 - [Visual Dexterity: In-Hand Reorientation of Novel and Complex Object Shapes](https://taochenshh.github.io/projects/visual-dexterity)
 - [AffordGrasp](https://arxiv.org/pdf/2503.00778)
+- [Grasp Diffusion](https://github.com/robotgradient/grasp_diffusion)
 
 
 ### Humanoid 
