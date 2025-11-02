@@ -73,6 +73,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [OpenArm - Open Source Humanoid](https://github.com/enactic/OpenArm)
 - [All Humanoids as of Oct 2025](https://spectrum.ieee.org/video-friday-robotic-hands-2674168909)
+- [Awesome Humanoid Learning](https://github.com/jonyzhang2023/awesome-humanoid-learning)
 
 ### Inference Pipeline
 
