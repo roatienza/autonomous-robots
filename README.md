@@ -42,6 +42,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 - [Robocasa](https://robocasa.ai/) :star2:
 - [Egocentric Dataset](https://build.ai/opensource)
+- [ACRONYM: A Large-Scale Grasp Dataset Based on Simulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9560844&casa_token=vgC8MR5HFdMAAAAA:75QBFeoIA_gzxBaQboj7SI5pIVsGL1uCRCeQOUo7QUypqqP8LUF8-IK5EIzTMqCuFqIx0BVBISgC&tag=1)
 
 
 ### Diffusion in Robotics
