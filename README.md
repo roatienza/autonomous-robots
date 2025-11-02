@@ -106,6 +106,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 
+### Simulation
+
+- [Habitat](https://github.com/facebookresearch/habitat-lab/)
+
 ### Skin
 
 - [Intrinsic sense of touch for intuitive physical human-robot interaction](https://www.science.org/doi/10.1126/scirobotics.adn4008)
