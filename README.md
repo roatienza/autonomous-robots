@@ -109,6 +109,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Simulation
 
 - [Habitat](https://github.com/facebookresearch/habitat-lab/)
+- [Newton](https://developer.nvidia.com/newton-physics)
 
 ### Skin
 
