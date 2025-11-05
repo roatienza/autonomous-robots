@@ -45,6 +45,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [ACRONYM: A Large-Scale Grasp Dataset Based on Simulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9560844&casa_token=vgC8MR5HFdMAAAAA:75QBFeoIA_gzxBaQboj7SI5pIVsGL1uCRCeQOUo7QUypqqP8LUF8-IK5EIzTMqCuFqIx0BVBISgC&tag=1)
 
 
+### Development Kit
+
+- [SunFounder](https://www.sunfounder.com/collections/robotics/products/picar-x)
+
 ### Diffusion in Robotics
 
 - [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/pdf/2303.04137)
