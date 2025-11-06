@@ -43,6 +43,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Robocasa](https://robocasa.ai/) :star2:
 - [Egocentric Dataset](https://build.ai/opensource)
 - [ACRONYM: A Large-Scale Grasp Dataset Based on Simulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9560844&casa_token=vgC8MR5HFdMAAAAA:75QBFeoIA_gzxBaQboj7SI5pIVsGL1uCRCeQOUo7QUypqqP8LUF8-IK5EIzTMqCuFqIx0BVBISgC&tag=1)
+- 
 
 
 ### Development Kit
@@ -71,6 +72,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Visual Dexterity: In-Hand Reorientation of Novel and Complex Object Shapes](https://taochenshh.github.io/projects/visual-dexterity)
 - [AffordGrasp](https://arxiv.org/pdf/2503.00778)
 - [Grasp Diffusion](https://github.com/robotgradient/grasp_diffusion)
+- [Open-Vocabulary Affordance Detection in 3D Point Clouds](https://arxiv.org/pdf/2303.02401)
 
 
 ### Humanoid 
