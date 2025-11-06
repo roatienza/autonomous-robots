@@ -73,6 +73,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [AffordGrasp](https://arxiv.org/pdf/2503.00778)
 - [Grasp Diffusion](https://github.com/robotgradient/grasp_diffusion)
 - [Open-Vocabulary Affordance Detection in 3D Point Clouds](https://arxiv.org/pdf/2303.02401)
+- [GraspGen](https://graspgen.github.io/)
 
 
 ### Humanoid 
