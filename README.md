@@ -12,6 +12,10 @@ Lecture Notes and Experiments on Autonomous Robots
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
 
 
+### Affordance
+
+- [Learning Affordances at Inference-Time for Vision-Language-Action Models](https://arxiv.org/pdf/2510.19752)
+
 ### Agents in Robotics
 
 - [RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
