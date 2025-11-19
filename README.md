@@ -116,6 +116,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 
+### Robotics Foundation Models
+
+- [Gemini Robptics](https://arxiv.org/pdf/2510.03342)
+
 ### Simulation
 
 - [Habitat](https://github.com/facebookresearch/habitat-lab/)
