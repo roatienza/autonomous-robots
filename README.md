@@ -153,3 +153,4 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Genesis RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2)
 - [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)
+- [NVIDIA Cosmos Cookbook](https://nvidia-cosmos.github.io/cosmos-cookbook/index.html)
