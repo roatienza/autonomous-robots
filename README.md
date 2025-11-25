@@ -129,6 +129,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Habitat](https://github.com/facebookresearch/habitat-lab/)
 - [Newton](https://developer.nvidia.com/newton-physics)
+- [Viral Humanoid](https://viral-humanoid.github.io/)
 
 ### Skin
 
