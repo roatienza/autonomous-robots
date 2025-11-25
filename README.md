@@ -95,6 +95,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
 
 
+### Joint Embedding
+
+- [Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations](https://arxiv.org/pdf/2510.23607)
+
+
 ### Memory for Robotics
 
 - [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
@@ -164,3 +169,4 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2)
 - [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)
 - [NVIDIA Cosmos Cookbook](https://nvidia-cosmos.github.io/cosmos-cookbook/index.html)
+- [Robot Learning from a Physical World Model](https://arxiv.org/pdf/2511.07416)
