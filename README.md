@@ -94,6 +94,7 @@ Lecture Notes and Experiments on Autonomous Robots
 #### Humanoid Dev Kits
 
 - [Noetix Robotics](https://en.noetixrobotics.com/)
+- [Humanoid Robots - Not Solution](https://www.forbes.com/sites/trondarneundheim/2025/12/01/humanoid-robots-wont-save-manufacturing-heres-what-will/)
 
 ### Inference Pipeline
 
