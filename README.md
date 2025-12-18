@@ -136,6 +136,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 
+### Rodney Brooks Essays
+
+- [Why Today’s Humanoids Won’t Learn Dexterity](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/)
+
 ### Robotics Foundation Models
 
 - [Gemini Robptics](https://arxiv.org/pdf/2510.03342)
