@@ -106,6 +106,10 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations](https://arxiv.org/pdf/2510.23607)
 
 
+### Lecture and Courses
+
+- [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
+
 ### Memory for Robotics
 
 - [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
