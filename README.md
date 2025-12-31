@@ -67,6 +67,9 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
 
+### Embodied AI
+
+- [Embodied AI Paper List](https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List)
 
 ### Foundation Models
 
