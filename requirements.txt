@@ -1,0 +1,36 @@
+# Python requirements for autonomous-robots project
+# Compatible with Python 3.12.12
+
+# Core ROS2 Python packages
+rclpy==4.0.0
+
+# ROS message types
+sensor_msgs==4.0.0
+std_msgs==4.0.0
+geometry_msgs==4.0.0
+std_srvs==4.0.0
+action_msgs==4.0.0
+
+# Robot-specific packages
+panda-py==0.1.0
+
+# General Python packages
+numpy==1.26.4
+requests==2.31.0
+
+# Development and testing packages
+pytest==8.1.1
+setuptools==69.0.3
+
+# ROS2 build tools
+ament-copyright==0.13.0
+ament-flake8==0.13.0
+ament-pep257==0.13.0
+ament-lint-auto==0.13.0
+ament-lint-common==0.13.0
+
+# Computer vision
+opencv-python==4.9.0.80
+
+# FastMCP for motion control
+fastmcp==0.1.0
