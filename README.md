@@ -119,6 +119,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
 - [FindingDory](https://arxiv.org/pdf/2506.15635)
 - [VLAs Memory](https://www.pi.website/research/memory)
+- [Observational Memory](https://mastra.ai/docs/memory/observational-memory)
 
 ### Motion Retargeting
 
