@@ -57,6 +57,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Development Kit
 
 - [SunFounder](https://www.sunfounder.com/collections/robotics/products/picar-x)
+- [Isaac NVIDIA](https://nvidia-isaac-ros.github.io/getting_started/index.html)
 
 ### Diffusion in Robotics
 
