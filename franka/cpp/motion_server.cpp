@@ -1,5 +1,7 @@
 // sudo apt-get install libcpprest-dev
 // g++ -std=c++11  bdm_motion_server.cpp -o bdm_motion_server -lcpprest -lssl -lcrypto -lboost_system
+// test:
+// curl -X POST http://192.168.2.100:34568 -H "Content-Type: application/json" -d '{"moveToCartesian": [0.5, 0, 0.3]}'
 //
 // Changes from motion_server.cpp:
 //   - Constructor now calls automaticErrorRecovery() on startup to clear any stale error state
@@ -91,7 +93,9 @@ public:
         if (verbose) {
             std::cout << std::fixed << std::setprecision(2);
             std::cout << "Alpha(Z): " << Alpha << ", Beta(Y): " << Beta << ", Gamma(X): " << Gamma << " radians" << std::endl;
+            // in degrees
             std::cout << "Alpha(Z): " << Alpha * 180 / M_PI << ", Beta(Y): " << Beta * 180 / M_PI << ", Gamma(X): " << Gamma * 180 / M_PI << " degrees" << std::endl;
+            // xyz coordinates
             std::cout << "X: " << pose[12] << ", Y: " << pose[13] << ", Z: " << pose[14] << " meters" <<  std::endl;
         }
         return std::make_tuple(Alpha, Beta, Gamma);
@@ -157,34 +161,37 @@ public:
         if (numbers.size() >= 5)
         {
             deltaAlpha = numbers[4];
+            // must be between -90 to 90 degrees
             if (deltaAlpha < -90 || deltaAlpha > 90)
             {
                 deltaAlpha = 0.0;
                 std::cerr << "Error: deltaAlpha must be between -90 and 90 degrees." << std::endl;
             }
-            deltaAlpha = deltaAlpha * M_PI / 180;
+            deltaAlpha = deltaAlpha * M_PI / 180;  // in radians
             is_rotation = true;
         }
 
         if (numbers.size() >= 6)
         {
             deltaBeta = numbers[5];
+            // must be between -90 and 90 degrees
             if (deltaBeta < -90 || deltaBeta > 90)
             {
                 deltaBeta = 0.0;
                 std::cerr << "Error: deltaBeta must be between -90 and 90 degrees." << std::endl;
             }
-            deltaBeta = deltaBeta * M_PI / 180;
+            deltaBeta = deltaBeta * M_PI / 180;  // in radians
         }
         if (numbers.size() >= 7)
         {
             deltaGamma = numbers[6];
+            // must be between -90 and 90 degrees
             if (deltaGamma < -90 || deltaGamma > 90)
             {
                 deltaGamma = 0.0;
                 std::cerr << "Error: deltaGamma must be between -90 and 90 degrees." << std::endl;
             }
-            deltaGamma = deltaGamma * M_PI / 180;
+            deltaGamma = deltaGamma * M_PI / 180;  // in radians
         }
 
         try
@@ -198,6 +205,7 @@ public:
 
                 if (time == 0.0)
                 {
+                    // Read the initial pose to start the motion from in the first time step.
                     initial_pose = robot_state.O_T_EE;
                     for(int i = 0; i < 16; i++)
                     {
@@ -219,6 +227,7 @@ public:
                     }
                 }
 
+                // cubic polynomial trajectory
                 franka::CartesianPose pose_desired = initial_pose;
                 double t2 = pow(time, 2);
                 double t3 = pow(time, 3);
@@ -264,6 +273,7 @@ public:
                     double Gammat = Gamma + a2 * t2 + a3 * t3;
                     double vGamma = 2 * a2 * time + 3 * a3 * t2;
 
+                    // Rotation matrix (ZYX Euler: Alpha=Z, Beta=Y, Gamma=X)
                     pose_desired.O_T_EE[0] = cos(Alphat) * cos(Betat);
                     pose_desired.O_T_EE[1] = sin(Alphat) * cos(Betat);
                     pose_desired.O_T_EE[2] = -sin(Betat);
@@ -314,9 +324,9 @@ public:
         final_coords[0] = final_pose[12];
         final_coords[1] = final_pose[13];
         final_coords[2] = final_pose[14];
-        final_coords[3] = std::get<0>(final_angles) * 180.0 / M_PI;
-        final_coords[4] = std::get<1>(final_angles) * 180.0 / M_PI;
-        final_coords[5] = std::get<2>(final_angles) * 180.0 / M_PI;
+        final_coords[3] = std::get<0>(final_angles) * 180.0 / M_PI;  // Alpha (Z) in degrees
+        final_coords[4] = std::get<1>(final_angles) * 180.0 / M_PI;  // Beta (Y) in degrees
+        final_coords[5] = std::get<2>(final_angles) * 180.0 / M_PI;  // Gamma (X) in degrees
         return final_coords;
     }
 
@@ -328,6 +338,7 @@ public:
             if (gripper_state.max_width < grasping_width) {
                 return "Object is too large for the current fingers on the gripper: " + std::to_string(gripper_state.max_width);
             }
+            // gripper.grasp(width, speed, force, epsilon_inner=0.005, epsilon_outer=0.005)
             if (!gripper.grasp(grasping_width, 0.1, 0.0, 0.01, 0.01)) {
                 return "Failed to grasp object.";
             }
