@@ -1,13 +1,19 @@
 // sudo apt-get install libcpprest-dev
-// g++ -std=c++11  motion_server.cpp -o float_api -lcpprest -lssl -lcrypto -lboost_system
-// sudo apt install libcpprest-dev 
-// test: 
-// curl -X POST http://192.168.1.200:34568 -H "Content-Type: application/json" -d "[0.5, 0, 0.3]"
+// g++ -std=c++11  bdm_motion_server.cpp -o bdm_motion_server -lcpprest -lssl -lcrypto -lboost_system
+// test:
+// curl -X POST http://192.168.2.100:34568 -H "Content-Type: application/json" -d '{"moveToCartesian": [0.5, 0, 0.3]}'
 //
+// Changes from motion_server.cpp:
+//   - Constructor now calls automaticErrorRecovery() on startup to clear any stale error state
+//   - moveToCartesian() catches franka::Exception, calls automaticErrorRecovery() to
+//     unlock the robot, then returns HTTP 400 with a "collision_recovery:" prefix so
+//     the Python side can decide what motion to perform next.
+//   - initialize() uses the same goHome() prompt as motion_server (press Enter before moving).
 
 #include <cpprest/http_listener.h>
 #include <cpprest/json.h>
-#include <iomanip>  // For std::setprecision
+#include <iomanip>
+#include <mutex>
 #include "common.h"
 
 using namespace web;
@@ -15,20 +21,37 @@ using namespace web::http;
 using namespace web::http::experimental::listener;
 
 class RobotHandler {
-    // Declare robot as a member variable
     franka::Robot robot;
     franka::Gripper gripper;
+    std::mutex robot_mutex;  // libfranka is not thread-safe; serialize all robot calls
 public:
-    // FIXME: Add a try-catch block to catch exceptions thrown by the robot
-    RobotHandler(const std::string& ip_addr) : robot(ip_addr), gripper(ip_addr) { // Initialize robot in the initializer list
+    RobotHandler(const std::string& ip_addr) : robot(ip_addr), gripper(ip_addr) {
+        // Clear any pre-existing error state left over from a previous run
+        try {
+            robot.automaticErrorRecovery();
+        } catch (const franka::Exception& e) {
+            // No error to recover from — this is fine
+            std::cerr << "Startup error recovery (may be benign): " << e.what() << std::endl;
+        }
+        // Note: setDefaultBehavior() intentionally NOT called here.
+        // It overrides Desk-configured force thresholds with values that may be
+        // too low for the robot's current pose, triggering a false collision stop.
     }
-    void initialize() {     
-       	goHome(robot);
+
+    void initialize() {
+        // Same startup behaviour as motion_server: prompt user before moving.
+        // If the arm can't reach home (obstacle, joint limit), abort with a clear message.
+        try {
+            goHome(robot);
+        } catch (const franka::Exception& e) {
+            throw std::runtime_error(
+                std::string("initialize(): failed to move to home position: ") + e.what());
+        }
         gripper.homing();
-        
+
         franka::Model model = robot.loadModel();
         const franka::RobotState& robot_state = robot.readOnce();
-        std::array<double, 16> initial_pose = robot_state.O_T_EE; //robot_state.O_T_EE_c;
+        std::array<double, 16> initial_pose = robot_state.O_T_EE;
         for(int i = 0; i < 16; i++)
         {
             std::cout << initial_pose[i] << ", ";
@@ -40,7 +63,7 @@ public:
         getRotationAngles();
     }
 
-    
+
     std::tuple<double, double, double> getRotationAngles(const std::array<double, 16>* custom_pose = nullptr, bool verbose = true) {
         std::array<double, 16> pose;
         if (custom_pose) {
@@ -49,7 +72,7 @@ public:
             const franka::RobotState& robot_state = robot.readOnce();
             pose = robot_state.O_T_EE;
         }
-        
+
         double Beta = atan2(-pose[2], sqrt(pow(pose[0], 2) + pow(pose[1], 2)));
         double Alpha = 0.0;
         double Gamma = 0.0;
@@ -66,16 +89,14 @@ public:
             Alpha = atan2(pose[1]/cosBeta, pose[0]/cosBeta);
             Gamma = atan2(pose[6]/cosBeta, pose[10]/cosBeta);
         }
-        
+
         if (verbose) {
             std::cout << std::fixed << std::setprecision(2);
             std::cout << "Alpha(Z): " << Alpha << ", Beta(Y): " << Beta << ", Gamma(X): " << Gamma << " radians" << std::endl;
             // in degrees
             std::cout << "Alpha(Z): " << Alpha * 180 / M_PI << ", Beta(Y): " << Beta * 180 / M_PI << ", Gamma(X): " << Gamma * 180 / M_PI << " degrees" << std::endl;
-            //std::cout << "cosBeta: " << cos(Beta) << std::endl;
             // xyz coordinates
             std::cout << "X: " << pose[12] << ", Y: " << pose[13] << ", Z: " << pose[14] << " meters" <<  std::endl;
-
         }
         return std::make_tuple(Alpha, Beta, Gamma);
     }
@@ -100,7 +121,7 @@ public:
     // moveToCartesian accepts three float numbers in a vector
     std::vector<double> moveToCartesian(const std::vector<float> &numbers)
     {
-        // vector of 3 double initialized to all zeros
+        std::lock_guard<std::mutex> lock(robot_mutex);
         std::vector<double> final_coords(6, 0.0);
         if (numbers.size() < 3)
         {
@@ -122,17 +143,15 @@ public:
         double deltaAlpha = 0.0, deltaBeta = 0.0, deltaGamma = 0.0;
         double Alphaf = 0.0, Betaf = 0.0, Gammaf = 0.0;
         bool is_rotation = false;
-        // Define a default constant for time
         const double DEFAULT_MOTION_TIME = 5.0;
 
         if (numbers.size() < 4)
         {
-            tf = DEFAULT_MOTION_TIME; // Use the default time duration
+            tf = DEFAULT_MOTION_TIME;
         }
         else if (numbers.size() >= 4)
         {
             tf = numbers[3];
-            // Check if tf is less than the default time
             if (tf < DEFAULT_MOTION_TIME)
             {
             tf = DEFAULT_MOTION_TIME;
@@ -142,54 +161,48 @@ public:
         if (numbers.size() >= 5)
         {
             deltaAlpha = numbers[4];
-            // must be between -90 to 90
+            // must be between -90 to 90 degrees
             if (deltaAlpha < -90 || deltaAlpha > 90)
             {
                 deltaAlpha = 0.0;
-                // print error
                 std::cerr << "Error: deltaAlpha must be between -90 and 90 degrees." << std::endl;
             }
-            //in radians
-            deltaAlpha = deltaAlpha * M_PI / 180;
+            deltaAlpha = deltaAlpha * M_PI / 180;  // in radians
             is_rotation = true;
         }
 
         if (numbers.size() >= 6)
         {
             deltaBeta = numbers[5];
-            // must be between -90 and 90
+            // must be between -90 and 90 degrees
             if (deltaBeta < -90 || deltaBeta > 90)
             {
                 deltaBeta = 0.0;
-                // print error
                 std::cerr << "Error: deltaBeta must be between -90 and 90 degrees." << std::endl;
             }
-            //in radians
-            deltaBeta = deltaBeta * M_PI / 180;
+            deltaBeta = deltaBeta * M_PI / 180;  // in radians
         }
         if (numbers.size() >= 7)
         {
             deltaGamma = numbers[6];
-            // must be between -90 and 90
+            // must be between -90 and 90 degrees
             if (deltaGamma < -90 || deltaGamma > 90)
             {
                 deltaGamma = 0.0;
-                // print error
                 std::cerr << "Error: deltaGamma must be between -90 and 90 degrees." << std::endl;
             }
-            //in radians
-            deltaGamma = deltaGamma * M_PI / 180;
+            deltaGamma = deltaGamma * M_PI / 180;  // in radians
         }
 
         try
         {
-            auto trajectory_callback = [this, xf, yf, zf, tf, is_rotation, deltaAlpha, deltaBeta, deltaGamma, 
+            auto trajectory_callback = [this, xf, yf, zf, tf, is_rotation, deltaAlpha, deltaBeta, deltaGamma,
                                         &time, &Alpha, &Beta, &Gamma, &Alphaf, &Betaf, &Gammaf, &initial_pose, &final_pose](
                                            const franka::RobotState &robot_state,
                                            franka::Duration period) -> franka::CartesianPose
             {
                 time += period.toSec();
-                
+
                 if (time == 0.0)
                 {
                     // Read the initial pose to start the motion from in the first time step.
@@ -203,13 +216,11 @@ public:
                         }
                     }
                     if (is_rotation){
-                        // get the rotation angles
                         std::tuple<double, double, double> angles = getRotationAngles(&initial_pose, false);
                         Alpha = std::get<0>(angles);
                         Beta = std::get<1>(angles);
                         Gamma = std::get<2>(angles);
-                        
-                        // Calculate final rotation angles
+
                         Alphaf = Alpha + deltaAlpha;
                         Betaf = Beta + deltaBeta;
                         Gammaf = Gamma + deltaGamma;
@@ -247,7 +258,6 @@ public:
                 pose_desired.O_T_EE[14] = zt;
 
                 if(is_rotation){
-                    // Rotation
                     a2 = 3 * (Alphaf - Alpha) / tf2;
                     a3 = -2 * (Alphaf - Alpha) / tf3;
                     double Alphat = Alpha + a2 * t2 + a3 * t3;
@@ -263,7 +273,7 @@ public:
                     double Gammat = Gamma + a2 * t2 + a3 * t3;
                     double vGamma = 2 * a2 * time + 3 * a3 * t2;
 
-                    // Rotation matrix
+                    // Rotation matrix (ZYX Euler: Alpha=Z, Beta=Y, Gamma=X)
                     pose_desired.O_T_EE[0] = cos(Alphat) * cos(Betat);
                     pose_desired.O_T_EE[1] = sin(Alphat) * cos(Betat);
                     pose_desired.O_T_EE[2] = -sin(Betat);
@@ -290,12 +300,26 @@ public:
         }
         catch (const franka::Exception &ex)
         {
-            std::cerr << ex.what() << std::endl;
+            std::cerr << "franka::Exception during motion: " << ex.what() << std::endl;
+
+            // Unlock the robot so it can accept new commands.
+            // The Python side is responsible for any recovery motion after this.
+            try {
+                std::cerr << "Attempting automatic error recovery..." << std::endl;
+                robot.automaticErrorRecovery();
+                std::cerr << "Robot unlocked. Returning 400 to caller." << std::endl;
+            } catch (const franka::Exception& recovery_ex) {
+                std::cerr << "Error recovery failed: " << recovery_ex.what() << std::endl;
+                throw std::runtime_error(
+                    std::string("collision_recovery_failed: original=") + ex.what() +
+                    " recovery=" + recovery_ex.what());
+            }
+
+            // The "collision_recovery:" prefix lets mainutilsedgrasper.py detect this case.
+            throw std::runtime_error(std::string("collision_recovery: ") + ex.what());
         }
 
-        // Initialize final_pose with the robot's final pose
         final_pose = robot.readOnce().O_T_EE;
-        // call getRotationAngles with final_pose
         std::tuple<double, double, double> final_angles = getRotationAngles();
         final_coords[0] = final_pose[12];
         final_coords[1] = final_pose[13];
@@ -307,28 +331,18 @@ public:
     }
 
     std::string closeGripper(const std::vector<float> &numbers) {
-        try {    
+        std::lock_guard<std::mutex> lock(robot_mutex);
+        try {
             double grasping_width = numbers[0];
-            // Check for the maximum grasping width.
             franka::GripperState gripper_state = gripper.readOnce();
-                if (gripper_state.max_width < grasping_width) {
+            if (gripper_state.max_width < grasping_width) {
                 return "Object is too large for the current fingers on the gripper: " + std::to_string(gripper_state.max_width);
             }
-
-            // Grasp the object.
-            //bool grasp(double width,
-            //double speed,
-            //double force,
-            //double epsilon_inner = 0.005,
-            //double epsilon_outer = 0.005) const;
-            
+            // gripper.grasp(width, speed, force, epsilon_inner=0.005, epsilon_outer=0.005)
             if (!gripper.grasp(grasping_width, 0.1, 0.0, 0.01, 0.01)) {
                 return "Failed to grasp object.";
             }
-
-            // Wait 3s and check afterwards, if the object is still grasped.
             std::this_thread::sleep_for(std::chrono::duration<double, std::milli>(100));
-
             gripper_state = gripper.readOnce();
             if (!gripper_state.is_grasped) {
                 return "Object lost.";
@@ -341,13 +355,12 @@ public:
 
     std::string openGripper(const std::vector<float> &numbers)
     {
+        std::lock_guard<std::mutex> lock(robot_mutex);
         try
         {
             franka::GripperState gripper_state = gripper.readOnce();
             double speed = numbers[0];
             std::cout << "Grasped object, will release it now." << std::endl;
-            //bool move(double width, double speed) const;
-
             gripper.move(gripper_state.max_width, speed);
             gripper.stop();
         }
@@ -357,14 +370,29 @@ public:
         }
         return "Gripper opened successfully.";
     }
+
+    // Returns current end-effector pose: [x, y, z, alpha_deg, beta_deg, gamma_deg].
+    // Used by Python to obtain the actual current rotation before issuing a reset move,
+    // since after a collision the arm may have stopped at an unknown intermediate angle.
+    std::vector<double> readState()
+    {
+        std::lock_guard<std::mutex> lock(robot_mutex);
+        const franka::RobotState& state = robot.readOnce();
+        std::array<double, 16> pose = state.O_T_EE;
+        auto [alpha, beta, gamma] = getRotationAngles(&pose, false);
+        return {pose[12], pose[13], pose[14],
+                alpha * 180.0 / M_PI,
+                beta  * 180.0 / M_PI,
+                gamma * 180.0 / M_PI};
+    }
 };
 
 class RobotRestAPI {
 public:
-    RobotRestAPI(utility::string_t url, const std::string& robot_ip) 
+    RobotRestAPI(utility::string_t url, const std::string& robot_ip)
         : m_listener(url), robotHandler(robot_ip) {
         m_listener.support(methods::POST, std::bind(&RobotRestAPI::handle_post, this, std::placeholders::_1));
-        robotHandler.initialize(); // Initialize the robot
+        robotHandler.initialize();
     }
 
     pplx::task<void> open() { return m_listener.open(); }
@@ -406,7 +434,6 @@ private:
 
                     if (key == "moveToCartesian") {
                         std::vector<double> final_coords = robotHandler.moveToCartesian(numbers);
-                        // convert the final_coords to a json array
                         for (int i = 0; i < 6; ++i) {
                             response[key][i] = json::value::number(final_coords[i]);
                         }
@@ -416,7 +443,12 @@ private:
                     } else if (key == "openGripper") {
                         std::string message = robotHandler.openGripper(numbers);
                         response[key] = json::value::string(message);
-                    }else {
+                    } else if (key == "readState") {
+                        std::vector<double> state = robotHandler.readState();
+                        for (int i = 0; i < 6; ++i) {
+                            response[key][i] = json::value::number(state[i]);
+                        }
+                    } else {
                         std::cout << "Invalid command: " << key << std::endl;
                         response["Response"] = json::value::string("Invalid command.");
                     }
@@ -435,11 +467,11 @@ private:
     }
 
     http_listener m_listener;
-    RobotHandler robotHandler; // Add RobotHandler as a member variable
-};;
+    RobotHandler robotHandler;
+};
 
 
-#include <iostream> // Add this include for std::cerr and std::cout
+#include <iostream>
 
 int main(int argc, char* argv[]) {
     std::string port = "34568";
@@ -449,10 +481,10 @@ int main(int argc, char* argv[]) {
 
     if (argc == 2) {
         robot_ip = argv[1];
-    } 
+    }
 
     RobotRestAPI api(utility_address, robot_ip);
-    
+
     try {
         api.open().wait();
         std::cout << "Listening at: " << address << std::endl;

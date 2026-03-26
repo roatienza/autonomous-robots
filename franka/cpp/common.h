@@ -19,15 +19,21 @@
 #include <thread>
 
 /**
- * @file examples_common.h
+ * @file common.h
  * Contains common types and functions for the examples.
  */
 
 /**
  * Moves the robot to a predefined home position.
+ * Prompts the user to press Enter before moving (interactive).
  */
-
 void goHome(franka::Robot& robot);
+
+/**
+ * Moves the robot to a predefined home position without blocking for user input.
+ * Safe to call from within a server context.
+ */
+void goHomeAuto(franka::Robot& robot);
 
 /**
  * Sets a default collision behavior, joint impedance and Cartesian impedance.

@@ -23,6 +23,14 @@ void goHome(franka::Robot& robot)
   std::cout << "Finished moving to initial joint configuration." << std::endl;
 }
 
+void goHomeAuto(franka::Robot& robot)
+{
+  std::array<double, 7> q_goal = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};
+  MotionGenerator motion_generator(.1, q_goal);
+  robot.control(motion_generator);
+  std::cout << "Finished moving to home joint configuration." << std::endl;
+}
+
 
 void setDefaultBehavior(franka::Robot& robot) {
   robot.setCollisionBehavior(
