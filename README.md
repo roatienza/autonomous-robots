@@ -145,6 +145,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [EasyR1](https://github.com/hiyouga/EasyR1)
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
+- [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
 
 ### Rodney Brooks Essays
 
