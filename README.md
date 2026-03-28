@@ -22,6 +22,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [OpenMind](https://openmind.org/)
 - [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
 
+### AutoResearch
+
+- [Sakana AI Scientist](https://sakana.ai/ai-scientist-nature/)
+- [AutoResearch](https://github.com/karpathy/autoresearch)
+- [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
 
 
 ### Blogs
