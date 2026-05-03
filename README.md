@@ -205,3 +205,4 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)
 - [NVIDIA Cosmos Cookbook](https://nvidia-cosmos.github.io/cosmos-cookbook/index.html)
 - [Robot Learning from a Physical World Model](https://arxiv.org/pdf/2511.07416)
+- [Nano World Model](https://github.com/simchowitzlabpublic/nano-world-model)
