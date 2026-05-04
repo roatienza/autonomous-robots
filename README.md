@@ -162,7 +162,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Robotics Foundation Models
 
-- [Gemini Robptics](https://arxiv.org/pdf/2510.03342)
+- [Gemini Robotics](https://arxiv.org/pdf/2510.03342)
 
 ### Simulation
 
