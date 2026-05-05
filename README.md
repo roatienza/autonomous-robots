@@ -10,6 +10,7 @@ Lecture Notes and Experiments on Autonomous Robots
 | Perception | [PDF](https://drive.google.com/file/d/1tZcBpqq-5jJ2vID9ryoN6sflCSZ9sJsk/view?usp=sharing) | - |
 | Visual Geometry | [PDF](https://drive.google.com/file/d/1mW31Csyx3tbVoknNvRaBG17z1x5YXhbv/view?usp=sharing) | - | 
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
+| Trajectory Planning | [PDF](https://drive.google.com/file/d/1k-yoVY_Dtodx9sMfIQIB4mRo2bJb5U6_/view?usp=sharing) | - |
 
 
 ### A16z
