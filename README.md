@@ -103,7 +103,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [OpenArm - Open Source Humanoid](https://github.com/enactic/OpenArm)
 - [All Humanoids as of Oct 2025](https://spectrum.ieee.org/video-friday-robotic-hands-2674168909)
 - [Awesome Humanoid Learning](https://github.com/jonyzhang2023/awesome-humanoid-learning)
-
+- [WUJI Hand as used by Genesis AI](https://youtu.be/LXVV-oErD8s?si=-6d9HWuypNRWzqlL)
 
 #### Humanoid Dev Kits
 
