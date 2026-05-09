@@ -104,6 +104,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [All Humanoids as of Oct 2025](https://spectrum.ieee.org/video-friday-robotic-hands-2674168909)
 - [Awesome Humanoid Learning](https://github.com/jonyzhang2023/awesome-humanoid-learning)
 - [WUJI Hand as used by Genesis AI](https://youtu.be/LXVV-oErD8s?si=-6d9HWuypNRWzqlL)
+- [Isaac GROOT](https://github.com/NVIDIA/Isaac-GR00T)
 
 #### Humanoid Dev Kits
 
@@ -122,6 +123,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Lecture and Courses
 
+- [LIBERO](https://libero-project.github.io/main.html)
 - [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
 
 ### Memory for Robotics
