@@ -158,6 +158,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [R-Zero](https://github.com/Chengsong-Huang/R-Zero)
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 - [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
+- [Reinforcement Learning Book by K Murphy](https://arxiv.org/pdf/2412.05265)
 
 ### Rodney Brooks Essays
 
