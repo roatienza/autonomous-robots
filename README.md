@@ -160,6 +160,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
 - [Reinforcement Learning Book by K Murphy](https://arxiv.org/pdf/2412.05265)
 
+
+### Robots (Commercially Available)
+
+- [YAM](https://i2rt.com/products/yam-6-dof-arm)
+
 ### Rodney Brooks Essays
 
 - [Why Today’s Humanoids Won’t Learn Dexterity](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/)
