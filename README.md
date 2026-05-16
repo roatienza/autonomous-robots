@@ -60,6 +60,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [ACRONYM: A Large-Scale Grasp Dataset Based on Simulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9560844&casa_token=vgC8MR5HFdMAAAAA:75QBFeoIA_gzxBaQboj7SI5pIVsGL1uCRCeQOUo7QUypqqP8LUF8-IK5EIzTMqCuFqIx0BVBISgC&tag=1)
 - [Spatial AI](https://huggingface.co/datasets/spatial-ai/sea-small)
 - [In-N-On Scaling Egocentric manipulation with in-the-wild and on-task data](https://xiongyicai.github.io/In-N-On/)
+- [Articraft-10K: Agentic System for Scalable Articulated 3D Asset Generation](docs/dataset/ARTICRAFT3D.md) :star:
 
 ### Depth Models
 
