@@ -209,6 +209,8 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### World Models
 
+- [SANA-WM: Efficient Minute-Scale World Modeling](docs/world_models/SANA_WM.md) :star2:
+
 - [NVIDIA Cosmos Reasoning](https://research.nvidia.com/labs/dir/cosmos-reason1/)
 - [DreamgGem by NVIDIA](https://research.nvidia.com/labs/gear/dreamgen/)
 - [Genesis RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
