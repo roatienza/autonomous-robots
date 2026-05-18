@@ -90,10 +90,21 @@
 - Train manipulation policies on diverse articulated objects
 - Test generalization to unseen categories
 - Evaluate robustness to variations
+
+![Robot Manipulation - Oven](media/manipulate_oven.gif)
+*Robot manipulation simulation with generated oven asset*
+
+![Robot Manipulation - Drawer](media/manipulate_drawer.gif)
+*Robot manipulation simulation with generated drawer asset*
+
 **2. Virtual Reality**
 - Interactive 3D environments with functional objects
 - Realistic physics-based interactions
 - Scalable content generation for VR applications
+
+![VR Demo](media/vr_demo.gif)
+*Virtual reality demonstration with Articraft-generated assets*
+
 **3. 3D Content Creation**
 - Automated generation of articulated assets for games
 - Rapid prototyping of mechanical designs
