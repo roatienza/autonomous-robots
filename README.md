@@ -127,6 +127,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [LIBERO](https://libero-project.github.io/main.html)
 - [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
+- [Flow Matching and Diffusion Models](docs/diffusion_flow_matching/LECTURE_NOTES.md) :star:
 
 ### Memory for Robotics
 
