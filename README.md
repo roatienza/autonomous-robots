@@ -11,7 +11,7 @@ Lecture Notes and Experiments on Autonomous Robots
 | Visual Geometry | [PDF](https://drive.google.com/file/d/1mW31Csyx3tbVoknNvRaBG17z1x5YXhbv/view?usp=sharing) | - | 
 | Kinematics | [PDF](https://drive.google.com/file/d/1BGR3RCgn05K2cvbFuy3s8DrGYGJIbtZS/view?usp=sharing) | - |
 | Trajectory Planning | [PDF](https://drive.google.com/file/d/1k-yoVY_Dtodx9sMfIQIB4mRo2bJb5U6_/view?usp=sharing) | - |
-| Diffusion and Flow Matching Applied to Behavior Cloning | [PDF](https://drive.google.com/file/d/16nYQnJlKJMPRRhzOSQyBAMCq_Vb3OWeS/view?usp=sharing)]
+| Diffusion and Flow Matching Applied to Behavior Cloning | [PDF](https://drive.google.com/file/d/16nYQnJlKJMPRRhzOSQyBAMCq_Vb3OWeS/view?usp=sharing) |
 | Vision Language Action | [PDF](https://drive.google.com/file/d/16DkjUin-H7kM-TYA_RxHv2txZeEP07EX/view?usp=sharing) | - |
 
 
