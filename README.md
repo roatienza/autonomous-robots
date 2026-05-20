@@ -225,3 +225,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Representation Learning to World Modeling](https://www.youtube.com/watch?v=GBd7iuJkW08)
 - [What are World Models - Nature](https://www.nature.com/articles/d41586-026-00820-5)
 - [World Model for Robot Learning: A Comprehensive Survey](https://arxiv.org/pdf/2605.00080)
+
+### Benchmarks
+
+- [ESI-Bench: Embodied Spatial Intelligence Benchmark](docs/benchmarks/ESI_BENCH.md) :star:
