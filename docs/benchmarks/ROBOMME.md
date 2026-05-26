@@ -57,3 +57,15 @@ The suite of memory-augmented VLAs shows varying performance across tasks.
 ## Real World Application
 ![Real World Tasks](robomme_media/real_world_tasks.jpg)
 ![Real World Results](robomme_media/real_world_result.png)
+
+## Citation
+If you find this work useful, please cite it as:
+
+```bibtex
+@inproceedings{dai2026robomme,
+  title={RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies},
+  author={Dai, Yinpei and Fu, Hongze and Lee, Jayjun and Liu, Yuejiang and Zhang, Haoran and Yang, Jianing and Finn, Chelsea and Fazeli, Nima and Chai, Joyce},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+```
