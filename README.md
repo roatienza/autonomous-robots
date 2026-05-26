@@ -133,6 +133,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Memory for Robotics
 
+- [RoboMME: A Large-Scale Standardized Benchmark for VLA Memory](docs/benchmarks/ROBOMME.md) :star:
 - [Enter the Mind Palace: Reasoning and Planning for Long-term Active Embodied Question Answering](https://arxiv.org/pdf/2507.12846)
 - [NVIDIA's ReMEmbR](https://nvidia-ai-iot.github.io/remembr)
 - [FindingDory](https://arxiv.org/pdf/2506.15635)
