@@ -214,21 +214,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### World Models
 
-- [SANA-WM: Efficient Minute-Scale World Modeling](docs/world_models/SANA_WM.md) :star2:
-
-- [NVIDIA Cosmos Reasoning](https://research.nvidia.com/labs/dir/cosmos-reason1/)
-- [DreamgGem by NVIDIA](https://research.nvidia.com/labs/gear/dreamgen/)
-- [Genesis RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
-- [Wan2.2](https://github.com/Wan-Video/Wan2.2)
-- [Awesome World Models](https://github.com/knightnemo/Awesome-World-Models)
-- [NVIDIA Cosmos Cookbook](https://nvidia-cosmos.github.io/cosmos-cookbook/index.html)
-- [Robot Learning from a Physical World Model](https://arxiv.org/pdf/2511.07416)
-- [Nano World Model](https://github.com/simchowitzlabpublic/nano-world-model)
-- [Representation Learning to World Modeling](https://www.youtube.com/watch?v=GBd7iuJkW08)
-- [What are World Models - Nature](https://www.nature.com/articles/d41586-026-00820-5)
-- [World Model for Robot Learning: A Comprehensive Survey](https://arxiv.org/pdf/2605.00080)
-- [Github: Stable World Model](https://github.com/galilai-group/stable-worldmodel)
-- [Nano World](https://arxiv.org/pdf/2605.23993)
+Detailed summaries and resources can be found in the [World Models Documentation](docs/world_models/README.md)
 
 ### Benchmarks
 
