@@ -19,6 +19,7 @@ This directory contains summaries and analyses of key research, frameworks, and 
 - [World Model for Robot Learning: A Comprehensive Survey](World_Model_Robot_Learning_Survey.md)
 - [Stable World Model](Stable_World_Model.md)
 - [Nano World (arXiv)](Nano_World.md)
+- [A Functional Taxonomy of World Models by Dr Fei Fei Li](https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models)
 
 ---
 *These summaries are designed to provide a quick overview of the core contributions and relevance of each item to the embodied AI community.*
