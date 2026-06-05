@@ -64,6 +64,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [In-N-On Scaling Egocentric manipulation with in-the-wild and on-task data](https://xiongyicai.github.io/In-N-On/)
 - [Articraft-10K: Agentic System for Scalable Articulated 3D Asset Generation](docs/dataset/ARTICRAFT3D.md) :star:
 - [HumanNet: Scaling Human-Centric Video Learning to One Million Hours](docs/dataset/HUMANNET.md) :star:
+- [GR00T Dataset](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim) :star:
 
 ### Depth Models
 
