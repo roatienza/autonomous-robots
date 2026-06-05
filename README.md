@@ -195,6 +195,11 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
 
+
+### Touch
+
+- [Spatially-anchored Tactile Awareness for Robust Dexterous Manipulation](https://arxiv.org/html/2510.14647v1)
+
 ### Tracking
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
