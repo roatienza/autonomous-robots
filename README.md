@@ -217,6 +217,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [OpenPi](https://github.com/Physical-Intelligence/openpi)
 - [State of VLA 2026](https://mbreuss.github.io/blog_post_iclr_26_vla.html)
+- [RynnBrain by Alibaba](https://arxiv.org/pdf/2602.14979v1)
 
 ### World Models
 
