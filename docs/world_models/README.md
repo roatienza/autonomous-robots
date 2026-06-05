@@ -11,7 +11,7 @@ This directory contains summaries and analyses of key research, frameworks, and 
 - [Genesis RoboGen](Genesis_RoboGen.md)
 - [Wan2.2](Wan2.2.md)
 - [Awesome World Models](Awesome_World_Models.md)
-- [NVIDIA Cosmos Cookbook](NVIDIA_Cosmos_Cookbook.md)
+- [NVIDIA Cosmos Cookbook](NVIDIA_Cosmos_Cookbook.md) and [Cosmos 3 World Model](https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3?ncid=so-yout-986320)
 - [Robot Learning from a Physical World Model](Robot_Learning_Physical_World_Model.md)
 - [Nano World Model](Nano_World_Model.md)
 - [Representation Learning to World Modeling](Representation_Learning_World_Modeling.md)
