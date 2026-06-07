@@ -20,6 +20,7 @@ This directory contains summaries and analyses of key research, frameworks, and 
 - [Stable World Model](Stable_World_Model.md)
 - [Nano World (arXiv)](Nano_World.md)
 - [A Functional Taxonomy of World Models by Dr Fei Fei Li](https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models)
+- [FlashDreams - World Model Serving](https://research.nvidia.com/labs/sil/projects/flashdreams/)
 
 ---
 *These summaries are designed to provide a quick overview of the core contributions and relevance of each item to the embodied AI community.*
