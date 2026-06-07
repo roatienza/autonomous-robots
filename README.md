@@ -160,6 +160,10 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Molmo2 AllenAI](https://playground.allenai.org/?model=molmo2-8b)
 
+### Recursive Intelligence
+
+- [Sakana RSI Lab](https://sakana.ai/rsi-lab/)
+
 ### Reinforcement Learning Framework
 
 - [EasyR1](https://github.com/hiyouga/EasyR1)
