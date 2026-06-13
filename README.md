@@ -19,6 +19,10 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Introduction to Autonomous Robots](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots)
 
+## Lectures
+
+- [Robot Learning by ETH](https://cvg.ethz.ch/lectures/Robot-Learning/)
+
 ### A16z
 
 - [Frontier System for Physical](https://www.a16z.news/p/frontier-systems-for-the-physical)
