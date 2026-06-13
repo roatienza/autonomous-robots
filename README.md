@@ -22,9 +22,13 @@ Lecture Notes and Experiments on Autonomous Robots
 ## Lectures
 
 - [Robot Learning by ETH](https://cvg.ethz.ch/lectures/Robot-Learning/)
+- [LIBERO](https://libero-project.github.io/main.html)
+- [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
+- [Flow Matching and Diffusion Models](docs/diffusion_flow_matching/LECTURE_NOTES.md) :star:
 
-### A16z
-
+## Blogs
+- [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
+- [Robotics from First Principles](https://interlatent.com/blog/interlatent-modern-ai-robotics-first-principles)
 - [Frontier System for Physical](https://www.a16z.news/p/frontier-systems-for-the-physical)
 
 ### Affordance
@@ -43,9 +47,6 @@ Lecture Notes and Experiments on Autonomous Robots
 - [AutoResearch](https://github.com/karpathy/autoresearch)
 - [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
 
-
-### Blogs
-- [3D Perception by NVIDIA](https://developer.nvidia.com/blog/r2d2-building-ai-based-3d-robot-perception-and-mapping-with-nvidia-research/)
 
 ### Data Visualization
 
@@ -118,27 +119,12 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Awesome Humanoid Learning](https://github.com/jonyzhang2023/awesome-humanoid-learning)
 - [WUJI Hand as used by Genesis AI](https://wuji.tech/en/) 
 - [Isaac GROOT](https://github.com/NVIDIA/Isaac-GR00T)
-
-#### Humanoid Dev Kits
-
 - [Noetix Robotics](https://en.noetixrobotics.com/)
 - [Humanoid Robots - Not Solution](https://www.forbes.com/sites/trondarneundheim/2025/12/01/humanoid-robots-wont-save-manufacturing-heres-what-will/)
 
 ### Inference Pipeline
 
 - [DeepStream8](https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/)
-
-
-### Joint Embedding
-
-- [Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations](https://arxiv.org/pdf/2510.23607)
-
-
-### Lecture and Courses
-
-- [LIBERO](https://libero-project.github.io/main.html)
-- [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
-- [Flow Matching and Diffusion Models](docs/diffusion_flow_matching/LECTURE_NOTES.md) :star:
 
 ### Memory for Robotics
 
@@ -152,16 +138,11 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Motion Retargeting
 
 - [General Motion Retargeting](https://github.com/YanjieZe/GMR)
+- [Imitating Humans](https://kimhanjung.github.io/UniSkill/)
 
 ### Neural Robots
 
 - [Neural Robot Dynamics](https://arxiv.org/pdf/2508.15755)
-
-### Papers
-
-- [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
-- [Imitating Humans](https://kimhanjung.github.io/UniSkill/)
-
 
 ### Pointing
 
@@ -170,6 +151,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Recursive Intelligence
 
 - [Sakana RSI Lab](https://sakana.ai/rsi-lab/)
+- [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
 
 ### Reinforcement Learning Framework
 
@@ -179,7 +161,6 @@ Lecture Notes and Experiments on Autonomous Robots
 - [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
 - [Reinforcement Learning Book by K Murphy](https://arxiv.org/pdf/2412.05265)
 
-
 ### Robots (Commercially Available)
 
 - [YAM](https://i2rt.com/products/yam-6-dof-arm)
@@ -188,10 +169,6 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Why Today’s Humanoids Won’t Learn Dexterity](https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/)
 
-### Robotics Foundation Models
-
-- [Gemini Robotics](https://arxiv.org/pdf/2510.03342)
-
 ### Simulation
 
 - [Habitat](https://github.com/facebookresearch/habitat-lab/)
@@ -199,25 +176,21 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Viral Humanoid](https://viral-humanoid.github.io/)
 - [Molmo-Bot](https://allenai.github.io/MolmoBot/)
 
-### Skin
-
-- [Intrinsic sense of touch for intuitive physical human-robot interaction](https://www.science.org/doi/10.1126/scirobotics.adn4008)
-
 ### SLAM
 
 - [Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
 
-
 ### Touch
 
 - [Spatially-anchored Tactile Awareness for Robust Dexterous Manipulation](https://arxiv.org/html/2510.14647v1)
+- [Intrinsic sense of touch for intuitive physical human-robot interaction](https://www.science.org/doi/10.1126/scirobotics.adn4008)
+
 
 ### Tracking
 
 - [3D Object Tracking](https://light.princeton.edu/publication/inverse-rendering-tracking/)
 - [Person Tracking (Sports)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/basketball-ai-how-to-detect-track-and-identify-basketball-players.ipynb)
   
-
 
 ### Vision
 
@@ -226,6 +199,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Vision Language Action (VLA)
 
+- [Gemini Robotics](https://arxiv.org/pdf/2510.03342)
 - [OpenPi](https://github.com/Physical-Intelligence/openpi)
 - [State of VLA 2026](https://mbreuss.github.io/blog_post_iclr_26_vla.html)
 - [RynnBrain by Alibaba](https://arxiv.org/pdf/2602.14979v1)
@@ -234,7 +208,4 @@ Lecture Notes and Experiments on Autonomous Robots
 ### World Models
 
 Detailed summaries and resources can be found in the [World Models Documentation](docs/world_models/README.md)
-
-### Benchmarks
-
 - [ESI-Bench: Embodied Spatial Intelligence Benchmark](docs/benchmarks/ESI_BENCH.md) :star:
