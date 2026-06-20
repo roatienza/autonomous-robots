@@ -136,10 +136,11 @@ Lecture Notes and Experiments on Autonomous Robots
 - [VLAs Memory](https://www.pi.website/research/memory)
 - [Observational Memory](https://mastra.ai/docs/memory/observational-memory)
 
-### Motion Retargeting
+### Motion Retargeting and Prediction
 
 - [General Motion Retargeting](https://github.com/YanjieZe/GMR)
 - [Imitating Humans](https://kimhanjung.github.io/UniSkill/)
+- [MolmoMotion: Language-guided 3D motion forecasting](https://huggingface.co/blog/allenai/molmomotion)
 
 ### Neural Robots
 
