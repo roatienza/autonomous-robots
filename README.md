@@ -73,6 +73,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Articraft-10K: Agentic System for Scalable Articulated 3D Asset Generation](docs/dataset/ARTICRAFT3D.md) :star:
 - [HumanNet: Scaling Human-Centric Video Learning to One Million Hours](docs/dataset/HUMANNET.md) :star:
 - [GR00T Dataset](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim) :star:
+- [Scalable Behavior Cloning with Open Data, Training, and Evaluation](https://abc.bot/)
 
 ### Depth Models
 
