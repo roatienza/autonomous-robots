@@ -34,6 +34,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Affordance
 
 - [Learning Affordances at Inference-Time for Vision-Language-Action Models](https://arxiv.org/pdf/2510.19752)
+- [RT-Affordance: Affordances are Versatile Intermediate Representations for Robot Manipulation](https://arxiv.org/abs/2411.02704)
 
 ### Agents in Robotics
 
