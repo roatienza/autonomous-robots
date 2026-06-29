@@ -216,3 +216,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 Detailed summaries and resources can be found in the [World Models Documentation](docs/world_models/README.md)
 - [ESI-Bench: Embodied Spatial Intelligence Benchmark](docs/benchmarks/ESI_BENCH.md) :star:
+
+### World Action Models
+
+- [Pretrained to Imagine, Fine-Tuned to Act: The Rise of World Action Models](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)
