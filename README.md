@@ -15,9 +15,10 @@ Lecture Notes and Experiments on Autonomous Robots
 | Vision Language Action | [PDF](https://drive.google.com/file/d/16DkjUin-H7kM-TYA_RxHv2txZeEP07EX/view?usp=sharing) | - |
 | World Models | [PDF](https://drive.google.com/file/d/1mQJ5EZiMQ-u3dqR98dQXwDwgKQ5iyhWA/view?usp=sharing)| - |
 
-## Book
+## Books
 
 - [Introduction to Autonomous Robots](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots)
+- [SLAM Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
 
 ## Lectures
 
@@ -183,9 +184,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Viral Humanoid](https://viral-humanoid.github.io/)
 - [Molmo-Bot](https://allenai.github.io/MolmoBot/)
 
-### SLAM
 
-- [Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
 
 ### Touch
 
