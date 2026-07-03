@@ -184,6 +184,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Newton](https://developer.nvidia.com/newton-physics)
 - [Viral Humanoid](https://viral-humanoid.github.io/)
 - [Molmo-Bot](https://allenai.github.io/MolmoBot/)
+- [Real2Sim2Real-SimFoundry](https://research.nvidia.com/labs/gear/simfoundry/)
 
 
 
