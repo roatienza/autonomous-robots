@@ -44,12 +44,14 @@ Lecture Notes and Experiments on Autonomous Robots
 - [OpenMind](https://openmind.org/)
 - [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
 
-### AutoResearch
+### AutoResearch - Recursive Intelligence
 
 - [Sakana AI Scientist](https://sakana.ai/ai-scientist-nature/)
 - [AutoResearch](https://github.com/karpathy/autoresearch)
 - [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
-
+- [Sakana RSI Lab](https://sakana.ai/rsi-lab/)
+- [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
+- [First Steps Toward Automated AI Research](https://www.recursive.com/articles/first-steps-toward-automated-ai-research)
 
 ### Data Visualization
 
@@ -157,10 +159,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Molmo2 AllenAI](https://playground.allenai.org/?model=molmo2-8b)
 
-### Recursive Intelligence
 
-- [Sakana RSI Lab](https://sakana.ai/rsi-lab/)
-- [Hierarchical Reasoning Model](https://github.com/sapientinc/HRM/)
 
 ### Reinforcement Learning Framework
 
