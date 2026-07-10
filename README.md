@@ -18,6 +18,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ## Books
 
 - [Introduction to Autonomous Robots](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots)
+- [Introduction to Autonomous Mobile Robots](https://www.ucg.ac.me/skladiste/blog_13268/objava_56689/fajlovi/Introduction%20to%20Autonomous%20Mobile%20Robots%20book.pdf)
 - [Reinforcement Leanring: An Overview by Kevin Murphy](https://arxiv.org/abs/2412.05265)
 - [SLAM Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
 
