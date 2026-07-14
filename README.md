@@ -170,6 +170,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
 - [Reinforcement Learning Book by K Murphy](https://arxiv.org/pdf/2412.05265)
 - [Agentic RL](https://cameronrwolfe.substack.com/p/agentic-rl)
+- [NVIDIA Molt Agent RL Framework](https://github.com/NVIDIA-NeMo/labs-molt.git) ⭐
 
 ### Robots (Commercially Available)
 
