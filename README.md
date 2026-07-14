@@ -186,6 +186,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Viral Humanoid](https://viral-humanoid.github.io/)
 - [Molmo-Bot](https://allenai.github.io/MolmoBot/)
 - [Real2Sim2Real-SimFoundry](https://research.nvidia.com/labs/gear/simfoundry/)
+- [Genesis World (supports touch/tactile](https://github.com/Genesis-Embodied-AI/genesis-world)
 
 
 
