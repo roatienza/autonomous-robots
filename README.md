@@ -103,6 +103,10 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Embodied AI Paper List](https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List)
 
+### Evaluation
+
+- [How to Evaluate General-Purpose Robot Policies for Real-World Deployment (NVIDIA)](https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/?mkt_tok=MTU2LU9GTi03NDIAAAGjMUJWoLLaUr36zBYdUdVaQp7E9DYrGprhdCskquGRaZv-mE60_tkkemeRjSTQ5A-r4AimuJURPVVqALdK3IdPaHvFDfg4Lsx6NucolkhuBjkvMThlyuEI)
+
 ### Foundation Models
 
 - [Perpeption Foundation Model](https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/)
