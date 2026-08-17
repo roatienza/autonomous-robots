@@ -186,6 +186,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Simulation
 
+- [The State of Simulation for Physical AI: An Overview (NVIDIA)](https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai)
 - [Habitat](https://github.com/facebookresearch/habitat-lab/)
 - [Newton](https://developer.nvidia.com/newton-physics)
 - [Viral Humanoid](https://viral-humanoid.github.io/)
