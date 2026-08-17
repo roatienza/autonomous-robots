@@ -105,7 +105,14 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ### Evaluation
 
+VLA evaluation is moving beyond LIBERO success-rate leaderboards toward a broader stack: unified sim-benchmark harnesses, real-robot production metrics, and independent real-world evaluation.
+
 - [How to Evaluate General-Purpose Robot Policies for Real-World Deployment (NVIDIA)](https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/?mkt_tok=MTU2LU9GTi03NDIAAAGjMUJWoLLaUr36zBYdUdVaQp7E9DYrGprhdCskquGRaZv-mE60_tkkemeRjSTQ5A-r4AimuJURPVVqALdK3IdPaHvFDfg4Lsx6NucolkhuBjkvMThlyuEI)
+- [VLA Evaluation Harness (Allen AI)](https://github.com/allenai/vla-evaluation-harness) — one framework to evaluate any VLA model on any robot simulation benchmark: 18+ benchmarks (LIBERO, SimplerEnv, CALVIN, ManiSkill2, RoboCasa, RoboTwin, RLBench, ...) behind a single interface, with a [VLA leaderboard](https://allenai.github.io/vla-evaluation-harness/leaderboard/).
+- [LeRobot Evaluation](https://huggingface.co/docs/lerobot/en/adding_benchmarks) — `lerobot-eval` gives one evaluation interface across multiple sim benchmarks, each wrapped as a Gymnasium environment behind a standard `gym.Env` interface.
+- [PhAIL — Physical AI Leaderboard](https://phail.ai) — real-robot benchmark (Franka FR3) scored on production metrics like throughput and failures; distributional methodology (time-to-success CDF, Human-Relative Throughput, KS significance tests). [Paper](https://arxiv.org/abs/2605.29710)
+- [Robocurve](https://robocurve.org) — independent, real-world robot evaluation: open-source [Inspect Robots](https://github.com/robocurve/inspect-robots) framework (any model × any embodiment × any benchmark, with full trace logs and Rerun visualization) plus the World Evals benchmark catalog.
+- [RoboDojo](https://github.com/RoboDojo-Benchmark/RoboDojo) — brings sim + real-world evaluation together: 42 sim tasks and 18 real-world tasks across 3 embodiments, five capability dimensions, heterogeneous parallel simulation in Isaac Sim, and a reproducible RealEval system. [Paper](https://arxiv.org/abs/2607.04434)
 
 ### Foundation Models
 
