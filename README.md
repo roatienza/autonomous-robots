@@ -80,6 +80,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [HumanNet: Scaling Human-Centric Video Learning to One Million Hours](docs/dataset/HUMANNET.md) :star:
 - [GR00T Dataset](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim) :star:
 - [Scalable Behavior Cloning with Open Data, Training, and Evaluation](https://abc.bot/)
+- [LightwheelAI EgoDemo](https://huggingface.co/datasets/LightwheelAI/EgoDemo) :star: — 50-hour developer sample of EgoSuite-Open100K (100K hours, 15,000+ tasks/scenes), the largest fully-annotated open egocentric human dataset: hand + full-body pose, semantic annotations, in LeRobot v3 / MCAP / raw MP4 (gated access)
 
 ### Depth Models
 
