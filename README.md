@@ -24,6 +24,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 ## Lectures
 
+- [MIT 16.485 — Visual Navigation for Autonomous Vehicles (VNAV)](https://vnav.mit.edu/) — mathematical foundations of visual navigation (geometry to optimization), state-of-the-art algorithms, and software packages
 - [Robot Learning by ETH](https://cvg.ethz.ch/lectures/Robot-Learning/)
 - [LIBERO](https://libero-project.github.io/main.html)
 - [University of Texas-Dallas](https://labs.utdallas.edu/irvl/courses/fall-2025-cs-6341-robotics/)
