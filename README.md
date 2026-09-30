@@ -207,6 +207,8 @@ VLA evaluation is moving beyond LIBERO success-rate leaderboards toward a broade
 
 ### Touch
 
+Detailed summaries and resources can be found in the [Touch Documentation](docs/touch/README.md)
+- [Awesome Touch](docs/touch/Awesome_Touch.md) :star:
 - [Spatially-anchored Tactile Awareness for Robust Dexterous Manipulation](https://arxiv.org/html/2510.14647v1)
 - [Intrinsic sense of touch for intuitive physical human-robot interaction](https://www.science.org/doi/10.1126/scirobotics.adn4008)
 
