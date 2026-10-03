@@ -100,6 +100,7 @@ Lecture Notes and Experiments on Autonomous Robots
 ### Development Kits for Robotics
 
 - [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
+- [Muse Gadgets](https://gadgets.muse.ai/) — open source hardware for your Muse: program an off-the-shelf ESP32 board or set up a Raspberry Pi with their SDKs, then connect Muse to your displays, buttons, sensors, and actuators.
 
 ### Embodied AI
 
