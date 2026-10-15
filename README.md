@@ -73,7 +73,8 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Behavior Challenge by Stanford](https://behavior.stanford.edu/index.html)
 - [BridgeData V2: A Dataset for Robot Learning at Scale](https://rail-berkeley.github.io/bridgedata/)
 - [Robocasa](https://robocasa.ai/) :star2:
-- [Hesai Kosmo spatial camera (Calder Brief)](https://calder-brief.pages.dev/hesai-kosmo-spatial-camera-october-2026) - Robotic vision hardware for robot perception (replaces build.ai/opensource, which was removed).
+- [Egocentric Dataset](https://huggingface.co/datasets/builddotai/Egocentric-10K)
+- [Hesai Kosmo spatial camera (Calder Brief)](https://calder-brief.pages.dev/hesai-kosmo-spatial-camera-october-2026) - Robotic vision hardware for robot perception
 - [ACRONYM: A Large-Scale Grasp Dataset Based on Simulation](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9560844&casa_token=vgC8MR5HFdMAAAAA:75QBFeoIA_gzxBaQboj7SI5pIVsGL1uCRCeQOUo7QUypqqP8LUF8-IK5EIzTMqCuFqIx0BVBISgC&tag=1)
 - [Spatial AI](https://huggingface.co/datasets/spatial-ai/sea-small)
 - [In-N-On Scaling Egocentric manipulation with in-the-wild and on-task data](https://xiongyicai.github.io/In-N-On/)
