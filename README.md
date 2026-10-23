@@ -21,6 +21,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [Introduction to Autonomous Mobile Robots](https://www.ucg.ac.me/skladiste/blog_13268/objava_56689/fajlovi/Introduction%20to%20Autonomous%20Mobile%20Robots%20book.pdf)
 - [Reinforcement Leanring: An Overview by Kevin Murphy](https://arxiv.org/abs/2412.05265)
 - [SLAM Handbook](http://asrl.utias.utoronto.ca/~tdb/slam/)
+- [Principles of Robot Autonomy](https://arxiv.org/abs/2608.03496) :star: — Stanford book (Gammelli, Lorenzetti, Luo, Zardini, Pavone), 531 pp., forthcoming from Cambridge University Press: a unified, deployment-aware introduction to modern autonomy stacks bridging classical robotics and physical AI, with hands-on Jupyter notebooks and implementation-driven exercises for every major topic
 
 ## Lectures
 
