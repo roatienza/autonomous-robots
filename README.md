@@ -15,6 +15,22 @@ Lecture Notes and Experiments on Autonomous Robots
 | Vision Language Action | [PDF](https://drive.google.com/file/d/16DkjUin-H7kM-TYA_RxHv2txZeEP07EX/view?usp=sharing) | - |
 | World Models | [PDF](https://drive.google.com/file/d/1mQJ5EZiMQ-u3dqR98dQXwDwgKQ5iyhWA/view?usp=sharing)| - |
 
+## Latest in Robotics Research (Week of Nov 2-8, 2026)
+
+**Foundation models & VLAs dominated the week.** Big releases: [Meituan-Robotics-0](https://arxiv.org/abs/2611.08577) (a VLA foundation model for desktop manipulation) and [Open-HumanWAM](https://arxiv.org/abs/2611.06817) (an open recipe for scaling human + robot experience into embodied foundation models). [Spatial-UMI-Dream](https://arxiv.org/abs/2611.07229) and [MDF++](https://arxiv.org/abs/2611.09293) scaled world action models with metric geometry and visuo-tactile learning, while [GuidedWAM](https://arxiv.org/abs/2611.07912) applied WAMs to autonomous driving.
+
+**Agentic & generalist policies emerged as the new framing.** [On Agentic Manipulation Policies](https://arxiv.org/abs/2611.09892) (Koltun group, code + videos) reframes manipulation as agentic policies; [Computer-Use Agents Are Embodied Generalists](https://arxiv.org/abs/2611.09847) argues GUI agents are robots too; [VABAR](https://arxiv.org/abs/2611.06881) adds a benchmark for agentic automation.
+
+**Humanoids had a strong week.** [STRIDE](https://arxiv.org/abs/2611.08857) learns humanoid locomotion *in minutes* via acceleration-based rewards; [Playing Soccer Like Humans Do](https://arxiv.org/abs/2611.06564) gets agile humanoid soccer from latent motion priors; [Terrain-Indexed Motion Priors](https://arxiv.org/abs/2611.08056) pushes extreme humanoid parkour; [HITCH](https://arxiv.org/abs/2611.08039) teaches a VLM to operate a humanoid through whole-body harnessing.
+
+**Manipulation & dexterity.** [Grasp-TAGS](https://arxiv.org/abs/2611.09864) (task-aware grasping for loco-manipulation), [HaNDF](https://arxiv.org/abs/2611.08578) (geometric neural hand distance fields), and a full-stack [survey of dexterous hands in the foundation-model era](https://arxiv.org/abs/2611.06724).
+
+**World models & sim for physical AI.** [Interactive World Simulation with Cosmos](https://arxiv.org/abs/2611.06627) (NVIDIA Cosmos) and [Time-to-Goal](https://arxiv.org/abs/2611.05847) (long-horizon planning with JEPA world models).
+
+**Notable others:** whole-body loco-manipulation with a [snake robot](https://arxiv.org/abs/2611.09777), [Can LLMs Debug Robots by Editing Their Weights?](https://arxiv.org/abs/2611.09376), zero-shot navigation by manipulation in messy scenes ([MessyNav](https://arxiv.org/abs/2611.07417)), and fast torque-limited planning ([cuRoboV2-Fast](https://arxiv.org/abs/2611.06913)).
+
+**Takeaway:** the field's center of gravity has shifted to VLA/world-action foundation models, agentic policies, and humanoid whole-body control - with efficiency (token pruning, inference bottlenecks) and safety (HOCBF, learned safe sets) as the fast-growing sub-themes.
+
 ## Books
 
 - [Introduction to Autonomous Robots](https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots)
