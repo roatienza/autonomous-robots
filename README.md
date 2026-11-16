@@ -119,6 +119,7 @@ Lecture Notes and Experiments on Autonomous Robots
 
 - [Segway Nova Carter](https://robotics.segway.com/%20nova-carter/)
 - [Muse Gadgets](https://gadgets.muse.ai/) — open source hardware for your Muse: program an off-the-shelf ESP32 board or set up a Raspberry Pi with their SDKs, then connect Muse to your displays, buttons, sensors, and actuators.
+- [Muse Gadget SDK](https://github.com/facebookincubator/muse-gadget-sdk) — open source ESP32 and Linux SDKs behind Muse Gadgets (Apache 2.0): screens, audio in/out, sensors, Home Assistant on a Raspberry Pi, and your own commands; supported boards include Raspberry Pi 5, Waveshare ESP32-S3-Touch-AMOLED-1.75C, Seeed reTerminal E1002, M5Stack StickS3, AiPi Lite, ideaspark ESP32 1.9", and Home Assistant Voice PE.
 
 ### Embodied AI
 
