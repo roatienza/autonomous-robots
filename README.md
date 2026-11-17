@@ -15,21 +15,14 @@ Lecture Notes and Experiments on Autonomous Robots
 | Vision Language Action | [PDF](https://drive.google.com/file/d/16DkjUin-H7kM-TYA_RxHv2txZeEP07EX/view?usp=sharing) | - |
 | World Models | [PDF](https://drive.google.com/file/d/1mQJ5EZiMQ-u3dqR98dQXwDwgKQ5iyhWA/view?usp=sharing)| - |
 
-## Latest in Robotics Research (Week of Nov 2-8, 2026)
+## Weekly Digest
 
-**Foundation models & VLAs dominated the week.** Big releases: [Meituan-Robotics-0](https://arxiv.org/abs/2611.08577) (a VLA foundation model for desktop manipulation) and [Open-HumanWAM](https://arxiv.org/abs/2611.06817) (an open recipe for scaling human + robot experience into embodied foundation models). [Spatial-UMI-Dream](https://arxiv.org/abs/2611.07229) and [MDF++](https://arxiv.org/abs/2611.09293) scaled world action models with metric geometry and visuo-tactile learning, while [GuidedWAM](https://arxiv.org/abs/2611.07912) applied WAMs to autonomous driving.
+Tracking the week in robotics + AI — news, products, announcements, research breakthroughs, papers, and open-source projects. One file per ISO week under [`docs/weekly/`](docs/weekly/), newest first.
 
-**Agentic & generalist policies emerged as the new framing.** [On Agentic Manipulation Policies](https://arxiv.org/abs/2611.09892) (Koltun group, code + videos) reframes manipulation as agentic policies; [Computer-Use Agents Are Embodied Generalists](https://arxiv.org/abs/2611.09847) argues GUI agents are robots too; [VABAR](https://arxiv.org/abs/2611.06881) adds a benchmark for agentic automation.
-
-**Humanoids had a strong week.** [STRIDE](https://arxiv.org/abs/2611.08857) learns humanoid locomotion *in minutes* via acceleration-based rewards; [Playing Soccer Like Humans Do](https://arxiv.org/abs/2611.06564) gets agile humanoid soccer from latent motion priors; [Terrain-Indexed Motion Priors](https://arxiv.org/abs/2611.08056) pushes extreme humanoid parkour; [HITCH](https://arxiv.org/abs/2611.08039) teaches a VLM to operate a humanoid through whole-body harnessing.
-
-**Manipulation & dexterity.** [Grasp-TAGS](https://arxiv.org/abs/2611.09864) (task-aware grasping for loco-manipulation), [HaNDF](https://arxiv.org/abs/2611.08578) (geometric neural hand distance fields), and a full-stack [survey of dexterous hands in the foundation-model era](https://arxiv.org/abs/2611.06724).
-
-**World models & sim for physical AI.** [Interactive World Simulation with Cosmos](https://arxiv.org/abs/2611.06627) (NVIDIA Cosmos) and [Time-to-Goal](https://arxiv.org/abs/2611.05847) (long-horizon planning with JEPA world models).
-
-**Notable others:** whole-body loco-manipulation with a [snake robot](https://arxiv.org/abs/2611.09777), [Can LLMs Debug Robots by Editing Their Weights?](https://arxiv.org/abs/2611.09376), zero-shot navigation by manipulation in messy scenes ([MessyNav](https://arxiv.org/abs/2611.07417)), and fast torque-limited planning ([cuRoboV2-Fast](https://arxiv.org/abs/2611.06913)).
-
-**Takeaway:** the field's center of gravity has shifted to VLA/world-action foundation models, agentic policies, and humanoid whole-body control - with efficiency (token pruning, inference bottlenecks) and safety (HOCBF, learned safe sets) as the fast-growing sub-themes.
+| Week | Digest | Highlights |
+| :--- | :--- | :--- |
+| 2026-W46 (Nov 9–15) | [docs/weekly/2026-W46.md](docs/weekly/2026-W46.md) | NVIDIA CEO transition · PEAR (MIT Han Lab) trains a 27B reasoning model in sim to drive real robots · Gemini Robotics 2.5 at 96% on live Mercedes lines · GXO signs for up to 1,000 Apollo humanoids · CoRL 2026: SuperMimic best paper, GR00T 2 |
+| 2026-W45 (Nov 2–8) | [docs/weekly/2026-W45.md](docs/weekly/2026-W45.md) | Meituan-Robotics-0 and Open-HumanWAM foundation models · agentic manipulation policies · humanoid soccer, parkour, and minutes-fast locomotion (STRIDE) · dexterous-hands survey |
 
 ## Books
 
@@ -62,6 +55,7 @@ Lecture Notes and Experiments on Autonomous Robots
 - [RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)
 - [OpenMind](https://openmind.org/)
 - [Ark Framework](https://github.com/Robotics-Ark/ark_framework)
+- [PEAR](https://github.com/mit-han-lab/pear) :star: — a Post-training Engine for Agentic Robotics (MIT Han Lab). Trains an open 27B reasoning model with Robot-Use RL entirely in simulation, without demonstrations or a harness; the model observes, reasons in chain-of-thought, and emits the next end-effector pose directly. LIBERO 1.6% → 74.4%; 60% success on a real dual-arm YAM (base: 0%); LIBERO-Pro 57.4% vs π0.5's 0.75%; general reasoning/coding/vision intact. Built on veRL + LMCache, vLLM + Ray; runs on RTX 5090/GB300 or H100/H200; drives YAM and SO-101 arms. Deep dive: [docs/pear/PEAR.md](docs/pear/PEAR.md)
 
 ### AutoResearch - Recursive Intelligence
 
@@ -202,12 +196,14 @@ VLA evaluation is moving beyond LIBERO success-rate leaderboards toward a broade
 - [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl)
 - [UWLab](https://github.com/UW-Lab/UWLab) and [Omni-Reset](https://weirdlabuw.github.io/omnireset/)
 - [Reinforcement Learning Book by K Murphy](https://arxiv.org/pdf/2412.05265)
+- [Robot-Use RL (RURL) — PEAR](https://github.com/mit-han-lab/pear) — RL post-training of a reasoning model for native robot use, entirely in simulation without demonstrations; see [docs/pear/PEAR.md](docs/pear/PEAR.md)
 - [Agentic RL](https://cameronrwolfe.substack.com/p/agentic-rl)
 - [NVIDIA Molt Agent RL Framework](https://github.com/NVIDIA-NeMo/labs-molt.git) ⭐
 
 ### Robots (Commercially Available)
 
 - [YAM](https://i2rt.com/products/yam-6-dof-arm)
+- [SO-101](https://github.com/huggingface/lerobot/tree/main/examples) — single-arm robot used for PEAR deployment runs
 
 ### Rodney Brooks Essays
 
@@ -231,6 +227,7 @@ Detailed summaries and resources can be found in the [Touch Documentation](docs/
 - [Awesome Touch](docs/touch/Awesome_Touch.md) :star:
 - [Spatially-anchored Tactile Awareness for Robust Dexterous Manipulation](https://arxiv.org/html/2510.14647v1)
 - [Intrinsic sense of touch for intuitive physical human-robot interaction](https://www.science.org/doi/10.1126/scirobotics.adn4008)
+- [LingBot-Touch](https://robottoday.com/article/robottoday-weekly-november-9-13-2026) (Ant Group Robbyant) — open-sourced tactile AI model for robot hands, trained on ~5,000 hours of recordings across three tactile sensor types and 26 real-world tasks on two hands
 
 
 ### Tracking
@@ -262,3 +259,4 @@ Detailed summaries and resources can be found in the [World Models Documentation
 - [FLUX 3 Action by Black Forest Labs](https://bfl.ai/models/flux-3-action) — a 7B **World Action Model** for robot control that predicts actions jointly with video. Trained across images, video, and audio for broader generalization than action demonstrations alone, then adapted via joint video-action training and finetuning for a target embodiment and action space (e.g. the 50-dim EE50 end-effector space). Published with the report and weights to make the recipe transparent — from pretraining/midtraining to finetuning and inference optimizations for local deployment. Beats the strongest open VLA (π0.5, 28.0%) and the Cosmos 3 Nano WAM (36.8%) on RoboLab, and is far cheaper to run than a WAM (Cosmos 3 Nano FP8 needs ~4.7x the per-second processing of π0.5 BF16 on a B200). A hybrid pairing with the Astra frontier reasoning model reaches 90% episode success at $8.77 and 8 min per success — 29% cheaper and 40% faster than the best alternative, up to 53.64% more success per dollar.
 - [Pretrained to Imagine, Fine-Tuned to Act: The Rise of World Action Models](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)
 - [World Action Models: A Survey](https://arxiv.org/pdf/2606.20781) — *Shen et al., 2026* (57 pages). A comprehensive survey clarifying the boundaries among world models, video generation models, action-grounded video world models, VLA policies, and World Action Models (WAMs). WAMs are **embodied predictive-action models** that forecast the future to inform action. The survey organizes existing work through two views: (1) **what each method generates** — rendered futures, latent futures, or video-generation-free action reasoning; and (2) **architectural decomposition** by predictive substrate, backbone, action coupling, and deployment regime. Key themes include interactability, causality, persistence, physical plausibility, and generalization. The emerging design pattern: WAMs are generating less of the future while preserving what control requires, trading representational richness against compute, memory, latency, and action-label cost. [Homepage](https://world-action-models.github.io/)
+- [Praxis-1 (Runway)](https://robottoday.com/article/robottoday-weekly-november-9-13-2026) — 27-billion-parameter world action model, open weights under Apache 2.0; 46.2% on NVIDIA's RoboLab-120 leaderboard
