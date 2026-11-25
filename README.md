@@ -21,6 +21,7 @@ Tracking the week in robotics + AI — news, products, announcements, research b
 
 | Week | Digest | Highlights |
 | :--- | :--- | :--- |
+| 2026-W47 (Nov 16–22) | [docs/weekly/2026-W47.md](docs/weekly/2026-W47.md) | Hyundai takes full ownership of Boston Dynamics (Atlas to GlobalFoundries fabs) · Genesis AI raises $500M Series A at $3.5B · Gemini 4 Hydrogen for robotics · Waymo barred from California freeways, Zoox live on Uber in Las Vegas · Uber×Zipline drone delivery in Texas · 151-humanoid dance Guinness record |
 | 2026-W46 (Nov 9–15) | [docs/weekly/2026-W46.md](docs/weekly/2026-W46.md) | NVIDIA CEO transition · PEAR (MIT Han Lab) trains a 27B reasoning model in sim to drive real robots · Gemini Robotics 2.5 at 96% on live Mercedes lines · GXO signs for up to 1,000 Apollo humanoids · CoRL 2026: SuperMimic best paper, GR00T 2 |
 | 2026-W45 (Nov 2–8) | [docs/weekly/2026-W45.md](docs/weekly/2026-W45.md) | Meituan-Robotics-0 and Open-HumanWAM foundation models · agentic manipulation policies · humanoid soccer, parkour, and minutes-fast locomotion (STRIDE) · dexterous-hands survey |
 
